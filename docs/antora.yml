@@ -1,6 +1,6 @@
 name: design
 title: Phase I - Design
-version: 1.0
+version: dev
 nav:
 - modules/ROOT/nav.adoc
 - modules/osp/nav.adoc
