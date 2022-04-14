@@ -10,7 +10,7 @@ This page is sourced from [.path]_demo-component-b/docs/modules/module-one/pages
 
 To create a cross reference *to this page from another page in Module One*, the xref syntax would be `\xref:overview.adoc[]`.
 
-To create a cross reference *to this page from a page in the ROOT module of Component B*, the xref syntax would be `\xref:module-one:overview.adoc[]`.
+To create a cross reference *to this page from a page in the ROOT module of Component B*, the xref syntax would be `\xref:design:overview.adoc[]`.
 
 === Always target the latest version of this page
 

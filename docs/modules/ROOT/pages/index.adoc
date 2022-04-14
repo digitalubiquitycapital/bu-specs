@@ -25,8 +25,8 @@ To create a cross reference *to this page from a page in Module One of Component
 
 === Always target the latest version of this page
 
-To create a cross reference *to the latest version of this page from a page in Component A*, the xref syntax would be `\xref:component-b::index.adoc[]`.
+To create a cross reference *to the latest version of this page from a page in Component A*, the xref syntax would be `\xref:design::index.adoc[]`.
 
 === Target a specific version of this page
 
-To create a cross reference *to version 1.0 of this page from a page in Component A*, the xref syntax would be `\xref:1.0@component-b::index.adoc[]`.
+To create a cross reference *to version 1.0 of this page from a page in Component A*, the xref syntax would be `\xref:1.0@design::index.adoc[]`.

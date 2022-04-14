@@ -3,4 +3,4 @@ title: Phase I - Design
 version: 1.0
 nav:
 - modules/ROOT/nav.adoc
-- modules/module-one/nav.adoc
+- modules/osp/nav.adoc
