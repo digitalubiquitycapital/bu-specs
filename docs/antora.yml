@@ -1,6 +1,6 @@
-name: design
-title: Phase I - Design
-version: dev
+name: osp
+title: Outside Plant
+version: 1.0
 nav:
 - modules/ROOT/nav.adoc
 - modules/osp/nav.adoc
