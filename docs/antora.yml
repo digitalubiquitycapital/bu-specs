@@ -1,7 +1,6 @@
-name: osp
-title: Outside Plant
+name: bu
+title: Broadband Utility
 prerelease: Pre
 version: 1.0.0
 nav:
 - modules/ROOT/nav.adoc
-- modules/osp/nav.adoc
