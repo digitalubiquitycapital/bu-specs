@@ -1,32 +1,19 @@
-= Welcome to Component B!
+= Welcome to Digital Ubiquity Capital
+:toc:
 
-This is the automatic start page for version *{page-component-version}* of Component B.
+== About this guide
 
-Component B is one of two documentation components in the Antora Demo.
-The other docs component, Component A, can be accessed via the component selector menu (aka component drawer) at the bottom of the menu on the left side of the page.
+This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
 
-== Page source
+== About Digital Ubiquity Capital
 
-This page is sourced from the AsciiDoc file named [.path]_index.adoc_ that is located at [.path]_demo-component-b/docs/modules/ROOT/pages_.
+Digital infrastructures are the foundational layer that are required to power tomorrow’s economy in the same way that railroads, roads, power and even waters ways have contributed to societies’ economic developments. Recent world events have accelerated radical digital transformations affecting the way we interact, work and live. It has demonstrated that in this upside down world,  health, education and government all need to leverage the digital infrastructures in a new way. This is why investing in partnership with communities is what will make these infrastructures sustainable and will empower tomorrow’s economic needs. At Digital Ubiquity Capital we focus on removing the complexities in these investments, making them accessible as Environmental, Social and Corporate Governance (ESG) investment instruments to institutional investments funds, family offices, and even individuals from the communities themselves.
 
-=== Why is this the home page of Component B?
+All projects that are financed by Digital Ubiquity Capital must comply with the frame of reference and values that makes them qualify for ESG investments and become economic development tools for the communities. Moreover, they must be done in partnership with various stakeholders in the communities, providing shared value and sustainable financial returns.
 
-This page is automatically used as the start page of Component B because it is stored in the ROOT module and named [.path]_index.adoc_.
 
-=== Why is this the home page of the Antora Demo site?
 
-This page is used as the home page for the Antora Demo because it is assigned as the site `start_page` in the Demo site's playbook file [.path]_site.yml_.
 
-== Cross reference syntax to target this page
 
-To create a cross reference *to this page from another page in the ROOT module of Component B*, the xref syntax would be `\xref:index.adoc[]`.
 
-To create a cross reference *to this page from a page in Module One of Component B*, the xref syntax would be `\xref:ROOT:index.adoc[]`.
 
-=== Always target the latest version of this page
-
-To create a cross reference *to the latest version of this page from a page in Component A*, the xref syntax would be `\xref:design::index.adoc[]`.
-
-=== Target a specific version of this page
-
-To create a cross reference *to version 1.0 of this page from a page in Component A*, the xref syntax would be `\xref:1.0@design::index.adoc[]`.

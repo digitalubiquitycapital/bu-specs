@@ -1,0 +1,15 @@
+= High-level Requirements
+
+== Overview
+
+The broadband utility specifications presented in this guide is meant to leverage existing industry best practices from years of experience in building and operating open access networks and cloud computing to make broadband utilities seamless, integrated and cost effective. Moreover, the document leverage and acknoledges and refers to multiple industry standards and specifications from different organization dedicated to addressing interoperabilty and compliance of solutions. Moreover, the nature of broadband utilities make it important for them to be a platform that will foster innovation in networking and will have the required flexibility to adapt to future protocols updates and requirements with limited dependences on vendor solutions. Finally, the importance of these infrastructures within the fabric of the society make them potential targets to cyber threats and as such security requirements need to be built-in the infrastructure.
+
+== Best Practices
+
+== Standards & Specifications
+
+== Innovation & Future Proofing
+
+== Cyber Security
+
+

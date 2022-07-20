@@ -1,0 +1,34 @@
+= Acknowledgments
+
+== Disclamer 
+This document is not meant to be a standard or a standalone specification. It is intented to be a set of comprehensive requirements to follow under a contractual framework for prime contractors building broadband utility projects under the oversight and governance of Digital Ubiquity Capital and affialiate financial partners.
+
+== Authors
+The following authors have contributed to this specifications guide
+
+* Mathieu Lemay - Digital Ubiquity Capital
+* Don Ellis - Nokia
+* Martin Charbonneau - Nokia
+* Walter Carpini - Nokia
+* Larry Marson - Digital Ubiquity Capital
+* Pascal Menezes - MEF
+
+== Organizations
+
+We would like to thank the following organizations for their contribution to this guide and recognize that all standard references and relevant intellectual property belong to these organizations. Digital Ubiquity Capital makes no claim on the intellectual property of these organizations project or standards referenced throughout this guide. Third-party organizations are required to have the appropriate level of membership and certifications to properly comply with the standards referenced where applicable.
+
+* link:http://www.mef.net[Metro Ethernet Forum]
+* link:http://www.tmforum.org[TM Forum]
+* link:http://www.telecominfraproject.com[Telecom Infra Project]
+* link:http://www.opencompute.org[Open Compute Project]
+* link:http://www.opennetworking.org[Open Networking Foundation]
+* link:http://www.linuxfoundation.org[Linux Foundation]
+* link:http://www.broadband-forum.org[Broadband Forum]
+
+== Patents & Intellectual Property
+
+The data structures, reference architectures, requirements and supported software solutions are intellectual property of Digital Ubiquity Capital or affiliates. They are protected with patents pending. Moreover material from this guide is confidential and will only be shared with project stakeholders as part of their contractual framework and as such using derivative material from this guide in any shape or form for a stakeholder documentation is prohibited.
+
+== Icons & Style
+
+Network and Architecture icons and style are Copyright © 2020 Telecom Infra Project, Inc. and used with permission. Unauthorized use is prohibited
