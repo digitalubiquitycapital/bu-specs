@@ -10,7 +10,7 @@ This document leverages the industry best practices and knowledge from industry 
 
 == Standards & Specifications
 
-For each relevant sections and structured approaches in building a broadband utility as per the xref:architecture.adoc[High-level Architecture] a variety of collaborations with standards industry has been established to ensure compatibility and compliance in services establishment, product definitions and point of delivery management for services offered for the market and their requirements. The various standards, organizations and partners that have made this guide possible are acknkowledged in the xref:acknowledgement.adoc[Acknowledgement] section of this guide.
+For each relevant sections and structured approaches in building a broadband utility as per the xref:architecture.adoc[High-level Architecture] a variety of collaborations with standards industry has been established to ensure compatibility and compliance in services establishment, product definitions and point of delivery management for services offered for the market and their requirements. The various standards, organizations and partners that have made this guide possible are acknkowledged in the xref:acknowledgments.adoc[Acknowledgement] section of this guide.
 
 == Innovation & Future Proofing
 
