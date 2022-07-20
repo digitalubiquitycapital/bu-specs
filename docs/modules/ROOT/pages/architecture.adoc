@@ -1,1 +1,138 @@
 = Architecture
+
+== Overview
+
+The high-level architecture of a broadband utility is based on a zoning model from best practices of Carrier Neutral Providers (CNP) and  supports emerging Cloud, 5G, IoT and Industry 4.0 networking requirements. For each zone point of delivery, suitable locations need to be identified but range from access locations cabinets pedestal or pole mounted to regional datacenters. Building flexibility to support proper mobility requirements could save money and time later and also improves the ability to attract Mobile tenants. Note most cities globally have 3-4 mobile operators and as they secure spectrum, more and more will prioritize shared infrastructure solutions over building their own private infrastructure.
+
+== Market Zones
+The market zones shown below provides a way to breakdown the activities and architecture of a broadband utility based on the market needs and service definitions and expectations for each of the market in providing broadband utility services to that community and may be operated by different organizations as long as standard interfaces are kept.
+
+image::market-zones.png[Market Zones]
+
+This introduces the recommended a zoning model for physical and logical assets and starts to set the services definitions, service-levels, distance, latency and performance requirements. These zones are also used to specify POP/NNIs, equipment types per zone, availability, utilization, operational processes, reporting regimes, data models and API and well as financial metrics (Revenue per zone) as part of the infrastructure blueprint.
+
+The Zoning architecture and requirements are tracking various standard forums (link:http://www.mef.net[MEF], link:http://www.ietf.org[IETF], link:http://www.itu.org[ITU]) and open forums and foundation initiatives (link:http://www.telecominfraproject.com[TIP], link://www.opencompute.org[OpenCompute], link:http://www.opennetworking.org[ONF]).   
+
+Since we are planning shared infrastructure it may be useful to familiarize ourselves with some of the guidelines used to determine proper zones of a project. 
+
+== Zoning Guidelines
+
+Each project is different and has various factors that will need to be traded-off, so this model/graph attempts to help you understand the various relationships between zones in order to implement the zoning strategy specific to the project in order to meet requirements and interfaces for interoperability. 
+
+.Zoning Guidelines
+|===
+| Market Zones | Access | Community | Market | Regional
+
+| Zone #
+| 1
+| 2
+| 3
+| 4
+
+| Distances
+| ~ 10-20km
+| ~ 40-80km
+| ~ 80-150km
+| ~ 500km
+
+| Technology
+| XGS-PON
+| ETHERNET
+| PACKET/OPTICAL
+| OPTICAL
+
+| Standards
+a| 
+  * BROADBAND FORUM
+  * OPEN NETWORKING
+  * TELECOM INFRA PLATFORM
+a| 
+  * MEF
+  * TELECOM INFRA PLATFORM
+  * ITU
+a|
+  * MEF
+  * IETF
+  * OPEN COMPUTE
+  * LINUX FOUNDATION
+a| 
+  * OPEN ROADM MSA
+  * OPENZR+
+  * TM FORUM
+|=== 
+
+== Zone Requirements
+
+
+The broadband utility identifies key requirements, service definitions, and data models per zone and creates a set of engineering requirements that will be assessed for compliance per zone. 
+
+
+.Zone Requirements
+|===
+| Market Zones | Access | Community | Market | Regional
+
+| Zone #
+| 1
+| 2
+| 3
+| 4
+
+| Services
+| Best Effort
+| High Quality
+| Protected
+| Transport
+
+| Services Interconnect
+| CPE
+| ETHERNET UNI
+| ETHERNET NNI
+| OTN NNI
+
+| OAM
+| vOMCI
+| ITU Y.1731
+a| 
+* MPLS OAM 
+* NETCONF 
+* gNMI
+a| 
+* OpenConfig 
+* gNMI 
+* NETCONF
+
+| Maximum Latency (ms)
+| 0.03
+| 0.15
+| 5
+| 30
+
+| Maximum Oversubscription Ratio
+| 4:1
+| 8:1
+| 16:1
+| 96:1
+
+| &lambda; Sharing Ratio
+| N/A
+| 1:1
+| 10:1
+| 10:1
+
+| Fiber Sharing Ratio
+| 32:1
+| 1:1
+| 18:1
+| 80:1
+
+|=== 
+
+The engineering requirements and guidelines for each zone introduced in future sections may vary per region. They are considered  “best practices” based on years of experience consulting to various CNPs, CSPs, MNOs, MSOs and ICPs. It represents our recommendations for Internet, 4/5G, IT and  Cloud requirements. We believe the IOT and Wireless IOT market and technologies could benefit from these “best practices” per zone and per project. Meeting standards , and high level requirements for each zone is mandatory and reference guidelines are provided as a blueprint path to contractual compliance.
+
+== Summary
+
+In Summary, zoning may be a way to segment, analyze and communicate your broadband utility projects in FTTH, middle-mile or long-haul vision to stakeholders, sponsors and community leaders.  It fits with that latest plan by a number of global shared infrastructure projects.
+
+As stated earlier the industry *best practices* are taken from various market leaders. Each player has taken risk, pushing new technology, new practices into new areas. These investments pushing closer and closer to the edge. Rakuten and Dish are moving mobile cloud to the edge, AWS and various partners are moving utility computing to the edge. Apple (iphone/ipad) are everywhere and Netflix is driving 100G servers to the edge and the UI is AWS’s utility computing. Offering broadband utility for wholesale Internet, wholesale Wireless (for 2-4 tenants) and wholesale Computing (for 2-4 tenants) should provide a long term revenue model for community networks. Of course not all communities can afford to build universal access, so targeting just utility Internet services as a subset of this guide is also an option and requires less planning, less capital and potentially less time. 
+
+

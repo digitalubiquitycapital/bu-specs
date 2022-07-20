@@ -16,7 +16,11 @@ For us, we define open infrastructures as the joint use of an asset or space. In
 
 == Broadband Utility 
 
-Given the life cycle (20-30 yr) of some of the telecommunication assets, some consideration should be given to the choice of broadband utility technologies (Wireline, Wireless & Compute), evolution plans and long term goals. Just as utility power was scaled out on a global level and enabled the “industrial age”, there is a thought that the utility Internet through Wireline, Wireless and Compute infrastructures could all be scaled out globally to support the “information age” and emerging services.  This includes open infrastructure (wholesale models) for utility wireline (transport, aggregation, access, fiber-to-the-premise), utility wireless (fixed wireless access, microwave, mmwave) and utility computing (IaaS, PaaS, SaaS) shared infrastructure solutions that make up a broadband utility. Each of these technologies are intended to improve productivity & operations via automation, machine learning and artificial Intelligence (AI) in many industry sectors and impact the communities and population. 
+Given the life cycle (20-30 yr) of some of the telecommunication assets, some consideration should be given to the choice of broadband utility technologies (Wireline, Wireless & Compute), evolution plans and long term goals. Just as utility power was scaled out on a global level and enabled the “industrial age”, there is a thought that the utility Internet through Wireline, Wireless and Compute infrastructures could all be scaled out globally to support the “information age” and emerging services.  
+
+image::end-to-end.png[End to End Broadband Utility]
+
+This includes open infrastructure (wholesale models) for utility wireline (transport, aggregation, access, fiber-to-the-premise), utility wireless (fixed wireless access, microwave, mmwave) and utility computing (IaaS, PaaS, SaaS) shared infrastructure solutions that make up a broadband utility completemented with satellite Internet services and traditional operators services. Each of these technologies are intended to improve productivity & operations via automation, machine learning and artificial Intelligence (AI) in many industry sectors and impact the communities and population. 
 
 == Service Providers
 

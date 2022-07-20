@@ -6,10 +6,19 @@ The broadband utility specifications presented in this guide is meant to leverag
 
 == Best Practices
 
+This document leverages the industry best practices and knowledge from industry hyperscalers and some of more innovative larger operators seeking that have had to live with regulated environments where broadband utilities and disaggregated network offering have been made mandatory by regulators. National broadband initiatives from Australia, Sweden, New Zealand and France as well a variety of successful community broadband initiatives have been involved for more than a decade of experiences in the creation of this document. As more broadband utilities are deployed this document is expected to improve on additional best practices and emerging solutions bringing additional cost efficiencies and technologies. Moreover, we recognized that an end-to-end broadband utility under a project may require expertise and collaboration between different types of operational partners (carriers, local operators, cloud operators, community IT) and this guide is meant to help create defined scope of operations based on market zoning, technologies and required expertises to operationalize each zones' requirements.
+
 == Standards & Specifications
+
+For each relevant sections and structured approaches in building a broadband utility as per the xref:architecture.adoc[High-level Architecture] a variety of collaborations with standards industry has been established to ensure compatibility and compliance in services establishment, product definitions and point of delivery management for services offered for the market and their requirements. The various standards, organizations and partners that have made this guide possible are acknkowledged in the xref:acknowledgement.adoc[Acknowledgement] section of this guide.
 
 == Innovation & Future Proofing
 
+The projects that are involving broadband utilities are different from traditional telecommunication network models and unlike the traditional telco are structured for longer return periods and patient capital. As such, monetization of the infrastructure assets (tower, fiber, spectrum, etc.) via a broadband utility must leverage technology innovation and techniques that will make sure that assets will be monetized properly and that the hardware and software infrastructures will be flexible enough to evolve over the lifetime of the infrastructure assets limiting the number of equipment refresh cycles throughout the duration of the project while continuously providing state of the art services to the Retail Service Providers and Emerging Services Providers. Moreover, in the evaluation of total cost of ownership the solutions will be reviewed to prevent vendor lock-in that would keep projects hostage to a single supplier or supply chain. As such, projects are expected to be able to source from multiple suppliers and as such open and commodity-based solutions with limited number of variations are part of the specifications to provide uniformity, auditability, flexibility and scalability to deployments. 
+
 == Cyber Security
+
+As telecommunications infrastructures are becoming increasingly prevalant in our daily activities and population is becoming reliant on them as a critical infrastructure for e911, emergencies, business activities cyber threats needs to be addressed. As such, this guide specifies isolation, security, and zero trust practices to operations and access depending on the various market zones and types of customers and organizations. 
+
 
 
