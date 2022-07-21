@@ -1,0 +1,47 @@
+= Zone Services
+
+== Service Definitions
+
+Access Zones have multiple types of services that must be offered and controlled under the proper systems. Bitream Access Services, Routing, Provider Edge and Subcriber Management features have to work properly to offer a multi-service broadband access utility that can be comply with xref:attachment$TR-178.pdf[Broadband Forum Technical Report TR-178] on multi-service broadband access while also providing the proper capabilities for hardware isolation and ehanced multi-tenancy for security.
+
+=== 25G/XGS-PON Bitstream Services 
+
+Layer 2 Bistream Access Services are provided via XGS-PON or 25G-PON as part of the solution based on zone's technology solutions.
+
+The  must be able to forward bitstream services at least based on the following encapsulations: 
+
+* no tagging, 
+* VLAN tagging (IEEE 802.1q), 
+* VLAN double tagging (IEEE 802.1ad) 
+* MACinMAC (IEEE 802.1ah). 
+
+or double tagging, the TPID value must also admit 0x8100 in the outer VLAN, together with the standard 0x88A8.
+
+=== Direct Fiber Access
+
+In the provision of L2 services for enterprise customers, the shall be MEF 3.0 compliant, at least with regards to E-LAN, E-LINE and E-TREE services. It will be very beneficial that the proposed platform is certified accordingly.
+
+In particular, the platform must support the implementation of E-LINE services based on VLL technology, and E-LAN services based on VPLS or H-VPLS. 
+
+* The solution proposed platform will permit the establishment of CIR, EIR, CBS and EBS parameters over the L2VPN service and/or each specific L2VPN client connection.
+
+* The proposed platform will permit configuring specific Layer-2 based filters per each L2VPN client connection. Other standard security measures shall be supported as well.
+
+* For E-LAN and E-TREE services, it must bepossible to configure in the proposed platform a different rate limit per each type of BUM traffic (one for broadcast, one for unknown unicast and one for multicast). It must also be possible to configure limits in the number of learnt MAC addresses per service and client interface, and the lifetime for these
+learnt MAC addresses.
+
+Finally, redundancy mechanisms, loop detection mechanisms and OAM
+functionalities shall be required for Direct Fiber Access Services. IGMP snooping must also be supported.
+
+=== Lawful Intercept
+The Lawful Interception mechanism supported by the Access Zone must be
+compliant with ETSI specifications like link:https://www.etsi.org/deliver/etsi_tr/101900_101999/101943/02.02.01_60/tr_101943v020201p.pdf[ETSI TR 101 943 (2006)] and in particular with regards to Reference Points INI1, INI2 and INI3 (X1, X2 and X3 in 3GPPP standards). The hardware and software platform must implement the Internal Intercept Function (IIF), while access and control of this function will only be possible from an Administration Function (ADMF). This access will be done ensuring that:
+
+. There is a single dedicated user profile, duly authenticated, with features not
+accessible to any other user profile (not even administrator). LI related
+configurations will only be visible for this profile.
+. Connectivity is limited to a single IP and port, with only one concurrent user,
+which is the ADMF.
+
+== Service Level Requirements
+The Bitstream services are best effort services and it is expected that the direct fiber access services work in conjunction with the Community Zone service level requirements and definitions offered as outlined under the particular product SLA. These SLAs are project and product specifics and need to be established as part of the project management requirements for the local market needs and realities by the governance of the project or the broadband utility commercial plans.  

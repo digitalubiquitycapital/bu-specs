@@ -1,0 +1,31 @@
+= Overview
+
+== Description
+
+Access Zones are the most complex zones of the infrastructure for a broadband utility. They must be flexible on onboard different types of customers and technologies from ultra rural markets to enterprise customers. As such the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
+
+== Problem
+
+The operators today are facing various issues when deploying access services for fixed customers (e.g. residential, SOHO, SME) to provide a secure and adequate service that will be compliant with wholesale regulations where most wholesale operators are required to meet specific Layer 2 Bitstream (L2BSA) specifications as well as provide lawful intercept requirements or the various hooks to have them provided and handled by the tenants of the broandband utility. Moreover the access network has been growing with demands being the bottleneck to most operators required to offer 25G default capacities to cell sites. 
+
+== Market Definition
+
+The market for the access zone is made up of :
+
+* Retail Customers (Residental, SOHO, SME)
+* Enterprise Customers (Direct Fiber Access)
+* Wireless/Mobility Tower Sites (Fiber to the Tower)
+* IoT / Industry 4.0 (Fiber to the Farm, etc.)
+
+A limited set of services are defined to be able to address the requiements and compliance for meeting these customers under a multi-tenant infrastructure that provides the appropriate level of hardware isolation and capacities.
+
+== Objectives
+
+All projects that are financed by Digital Ubiquity Capital must comply with the frame of reference and values that makes them qualify for ESG investments and become economic development tools for the communities. Moreover, they must be done in partnership with various stakeholders in the communities, providing shared value and sustainable financial returns.
+
+
+
+
+
+
+

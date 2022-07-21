@@ -1,0 +1,16 @@
+site: 
+  title: Broadband Utility  
+  start_page: bu::index.adoc
+content:
+   sources: 
+   - url: .
+     start_path: docs
+output:
+  dir: public
+  clean: true
+ui:
+  bundle:
+    url: ../docs-ui-default/build/ui-bundle.zip
+    snapshot: true
+runtime:
+  fetch: true

@@ -1,0 +1,19 @@
+= Operations
+
+== Overview
+
+This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+
+== Requirements
+
+== OSS/BSS Systems
+
+== Border Network Gateway
+
+=== Software Defined Networking
+
+== Edge Container Fabric
+
+=== Hardware Acceleration
+
+== Operations & Telemetry

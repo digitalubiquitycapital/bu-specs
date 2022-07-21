@@ -1,0 +1,52 @@
+= Architecture
+
+== Overview
+
+In order to meet the service requirements defined and required for the access zone as well as all of the non functional requirements on abstraction, security and vendor independance the following architecture is required and solutions MUST at minimum have the following components as part of the point of delivery (POD) solutions offered by the various vendors these internal components of the architecture are expected to be compliant to their respective set of specifications.
+
+== Functional Requirements
+
+image::az-arch.png[Access Zore Architecture]
+
+== A-POD
+The Access POD or A-POD is a point of delivery of integrated software and hardware solutions that must contain the specifications compliant architectural components outlined below.
+
+=== Border Network Gateway
+
+The Border Network Gateway is expected to be compliant with meeting or exceeding the xref:attachment$TIP_OpenBNG_Requirements_1.0.pdf[OpenBNG Technical Requirements]. The Access POD must be able to have the required hardware capabilities in the form factor as well as leverage the ability to run virtual instances of the OpenBNG requirements a *vBNG* in the container fabric. This virtual BNG will not have the same capacitities as the hardware BNG but is required to have the same interfaces for SDN controllers and orchestrators.
+
+The following software providers have shown to have compliant software or hardware meeting the specifications:
+
+|===
+| Software | Hardware 
+
+a|
+* Benu Networks
+* Altran / CapGemini
+* Casa Systems
+* RtBrick
+
+a|
+* APS Network
+* Delta
+* Edge-Core
+* ufiSpace
+
+|===
+
+This list is not meant to be an exhaustive list and provides only shortlisted compliant suppliers under the OpenBNG RFI activities by operators in December 2021.
+
+=== Optical Line Terminal
+
+
+=== Container Fabric
+
+
+== APOD EXTENDER
+
+=== Optical Line Terminal
+
+=== Container Fabric
+
+
+

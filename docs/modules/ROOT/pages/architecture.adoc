@@ -4,8 +4,8 @@
 
 The high-level architecture of a broadband utility is based on a zoning model from best practices of Carrier Neutral Providers (CNP) and  supports emerging Cloud, 5G, IoT and Industry 4.0 networking requirements. For each zone point of delivery, suitable locations need to be identified but range from access locations cabinets pedestal or pole mounted to regional datacenters. Building flexibility to support proper mobility requirements could save money and time later and also improves the ability to attract Mobile tenants. Note most cities globally have 3-4 mobile operators and as they secure spectrum, more and more will prioritize shared infrastructure solutions over building their own private infrastructure.
 
-== Market Zones
-The market zones shown below provides a way to breakdown the activities and architecture of a broadband utility based on the market needs and service definitions and expectations for each of the market in providing broadband utility services to that community and may be operated by different organizations as long as standard interfaces are kept.
+== Zones Definitions
+The zone definitions shown below provides a way to breakdown the activities and architecture of a broadband utility based on the market needs and service definitions and expectations for each of the market in providing broadband utility services to that community and may be operated by different organizations as long as standard interfaces are kept.
 
 image::market-zones.png[Market Zones]
 
@@ -21,7 +21,7 @@ Each project is different and has various factors that will need to be traded-of
 
 .Zoning Guidelines
 |===
-| Market Zones | Access | Community | Market | Regional
+| Zones | Access | Community | Market | Regional
 
 | Zone #
 | 1
@@ -29,17 +29,23 @@ Each project is different and has various factors that will need to be traded-of
 | 3
 | 4
 
+| Purpose
+| Service Residential, SME, Wireless and small Enterprise
+| Large Enterprise, Point of Handover, Service Providers
+| Datacenter Interconnect, Market Interconnect
+| Carrier & Transport Networking
+
 | Distances
-| ~ 10-20km
-| ~ 40-80km
-| ~ 80-150km
+| ~ 10-40km
+| ~ 40-120km
+| ~ 120km-500km
 | ~ 500km
 
 | Technology
 | XGS-PON
-| ETHERNET
+| ETHERNET/MPLS
 | PACKET/OPTICAL
-| OPTICAL
+| PACKET/OPTICAL
 
 | Standards
 a| 
@@ -51,13 +57,12 @@ a|
   * TELECOM INFRA PLATFORM
   * ITU
 a|
-  * MEF
-  * IETF
+  * OPENZR+
+  * 400ZR
   * OPEN COMPUTE
   * LINUX FOUNDATION
 a| 
   * OPEN ROADM MSA
-  * OPENZR+
   * TM FORUM
 |=== 
 
@@ -69,7 +74,7 @@ The broadband utility identifies key requirements, service definitions, and data
 
 .Zone Requirements
 |===
-| Market Zones | Access | Community | Market | Regional
+| Zones | Access | Community | Market | Regional
 
 | Zone #
 | 1

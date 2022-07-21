@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecture :: Broadband Utility</title>
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+    <link rel="icon" href="../../_/img/favicon.png" type="image/x-icon"> 
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://www.digitalubiquitycapital.com"><img src="../../_/img/logo.png" style="height:40px"></a>      
+<!-- <a class="navbar-item" href="../..">Broadband Utility</a> -->
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+<!--    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div> -->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="bu" data-version="1.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Broadband Utility</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Welcome</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="acknowledgments.html">Acknowledgments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="architecture.html">Architecture</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Access Zone</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/hardware.html">Hardware</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/software.html">Software</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/operations.html">Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="access-zone/reporting.html">Reporting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Community Zone</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/hardware.html">Hardware</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/software.html">Software</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/operations.html">Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="community-zone/reporting.html">Reporting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Market Zone</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/hardware.html">Hardware</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/software.html">Software</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/operations.html">Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="market-zone/reporting.html">Reporting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Regional Zone</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/architecture.html">Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/hardware.html">Hardware</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/software.html">Software</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/operations.html">Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="regional-zone/reporting.html">Reporting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Broadband Utility</span>
+    <span class="version">1.0.0 Pre</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Broadband Utility</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1.0.0 Pre</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Broadband Utility</a></li>
+    <li><a href="architecture.html">Architecture</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/mlemay/projects/duc-docs/bu-specs/docs/modules/ROOT/pages/architecture.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Architecture</h1>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The high-level architecture of a broadband utility is based on a zoning model from best practices of Carrier Neutral Providers (CNP) and  supports emerging Cloud, 5G, IoT and Industry 4.0 networking requirements. For each zone point of delivery, suitable locations need to be identified but range from access locations cabinets pedestal or pole mounted to regional datacenters. Building flexibility to support proper mobility requirements could save money and time later and also improves the ability to attract Mobile tenants. Note most cities globally have 3-4 mobile operators and as they secure spectrum, more and more will prioritize shared infrastructure solutions over building their own private infrastructure.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zones_definitions"><a class="anchor" href="#_zones_definitions"></a>Zones Definitions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The zone definitions shown below provides a way to breakdown the activities and architecture of a broadband utility based on the market needs and service definitions and expectations for each of the market in providing broadband utility services to that community and may be operated by different organizations as long as standard interfaces are kept.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/market-zones.png" alt="Market Zones">
+</div>
+</div>
+<div class="paragraph">
+<p>This introduces the recommended a zoning model for physical and logical assets and starts to set the services definitions, service-levels, distance, latency and performance requirements. These zones are also used to specify POP/NNIs, equipment types per zone, availability, utilization, operational processes, reporting regimes, data models and API and well as financial metrics (Revenue per zone) as part of the infrastructure blueprint.</p>
+</div>
+<div class="paragraph">
+<p>The Zoning architecture and requirements are tracking various standard forums (<a href="http://www.mef.net">MEF</a>, <a href="http://www.ietf.org">IETF</a>, <a href="http://www.itu.org">ITU</a>) and open forums and foundation initiatives (<a href="http://www.telecominfraproject.com">TIP</a>, <a href="//www.opencompute.org">OpenCompute</a>, <a href="http://www.opennetworking.org">ONF</a>).</p>
+</div>
+<div class="paragraph">
+<p>Since we are planning shared infrastructure it may be useful to familiarize ourselves with some of the guidelines used to determine proper zones of a project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zoning_guidelines"><a class="anchor" href="#_zoning_guidelines"></a>Zoning Guidelines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each project is different and has various factors that will need to be traded-off, so this model/graph attempts to help you understand the various relationships between zones in order to implement the zoning strategy specific to the project in order to meet requirements and interfaces for interoperability.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Zoning Guidelines</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Zones</th>
+<th class="tableblock halign-left valign-top">Access</th>
+<th class="tableblock halign-left valign-top">Community</th>
+<th class="tableblock halign-left valign-top">Market</th>
+<th class="tableblock halign-left valign-top">Regional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zone #</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Residential, SME, Wireless and small Enterprise</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Large Enterprise, Point of Handover, Service Providers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datacenter Interconnect, Market Interconnect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Carrier &amp; Transport Networking</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">~ 10-40km</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">~ 40-120km</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">~ 120km-500km</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">~ 500km</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technology</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XGS-PON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETHERNET/MPLS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PACKET/OPTICAL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PACKET/OPTICAL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standards</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>BROADBAND FORUM</p>
+</li>
+<li>
+<p>OPEN NETWORKING</p>
+</li>
+<li>
+<p>TELECOM INFRA PLATFORM</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>MEF</p>
+</li>
+<li>
+<p>TELECOM INFRA PLATFORM</p>
+</li>
+<li>
+<p>ITU</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>OPENZR+</p>
+</li>
+<li>
+<p>400ZR</p>
+</li>
+<li>
+<p>OPEN COMPUTE</p>
+</li>
+<li>
+<p>LINUX FOUNDATION</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>OPEN ROADM MSA</p>
+</li>
+<li>
+<p>TM FORUM</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zone_requirements"><a class="anchor" href="#_zone_requirements"></a>Zone Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The broadband utility identifies key requirements, service definitions, and data models per zone and creates a set of engineering requirements that will be assessed for compliance per zone.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Zone Requirements</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Zones</th>
+<th class="tableblock halign-left valign-top">Access</th>
+<th class="tableblock halign-left valign-top">Community</th>
+<th class="tableblock halign-left valign-top">Market</th>
+<th class="tableblock halign-left valign-top">Regional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zone #</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best Effort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High Quality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transport</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services Interconnect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETHERNET UNI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ETHERNET NNI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OTN NNI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vOMCI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ITU Y.1731</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>MPLS OAM</p>
+</li>
+<li>
+<p>NETCONF</p>
+</li>
+<li>
+<p>gNMI</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>OpenConfig</p>
+</li>
+<li>
+<p>gNMI</p>
+</li>
+<li>
+<p>NETCONF</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum Latency (ms)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum Oversubscription Ratio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">96:1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lambda; Sharing Ratio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10:1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiber Sharing Ratio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18:1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80:1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The engineering requirements and guidelines for each zone introduced in future sections may vary per region. They are considered  “best practices” based on years of experience consulting to various CNPs, CSPs, MNOs, MSOs and ICPs. It represents our recommendations for Internet, 4/5G, IT and  Cloud requirements. We believe the IOT and Wireless IOT market and technologies could benefit from these “best practices” per zone and per project. Meeting standards , and high level requirements for each zone is mandatory and reference guidelines are provided as a blueprint path to contractual compliance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Summary, zoning may be a way to segment, analyze and communicate your broadband utility projects in FTTH, middle-mile or long-haul vision to stakeholders, sponsors and community leaders.  It fits with that latest plan by a number of global shared infrastructure projects.</p>
+</div>
+<div class="paragraph">
+<p>As stated earlier the industry <strong>best practices</strong> are taken from various market leaders. Each player has taken risk, pushing new technology, new practices into new areas. These investments pushing closer and closer to the edge. Rakuten and Dish are moving mobile cloud to the edge, AWS and various partners are moving utility computing to the edge. Apple (iphone/ipad) are everywhere and Netflix is driving 100G servers to the edge and the UI is AWS’s utility computing. Offering broadband utility for wholesale Internet, wholesale Wireless (for 2-4 tenants) and wholesale Computing (for 2-4 tenants) should provide a long term revenue model for community networks. Of course not all communities can afford to build universal access, so targeting just utility Internet services as a subset of this guide is also an option and requires less planning, less capital and potentially less time.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>&copy;2021 Digital Ubiquity Capital. All Rights Reserved.</p>
+  <p>The informations, specifications and data models presented in this guide are the property of Digital Ubiquity Capital Inc. and are confidential to project participants and protected under non-disclosure agreements.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
