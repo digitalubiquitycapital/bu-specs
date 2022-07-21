@@ -6,6 +6,8 @@ In order to meet the service requirements defined and required for the access zo
 
 == Functional Requirements
 
+The following image provides the functional elements that are *required* at a *minimum* for a compliants solution. Additional elements maybe added for completeness to the units of delivery.
+
 image::az-arch.png[Access Zore Architecture]
 
 == A-POD
@@ -38,9 +40,31 @@ This list is not meant to be an exhaustive list and provides only shortlisted co
 
 === Optical Line Terminal
 
+The Optical Line terminal (OLT) and vendors solutions needs to be abstracted via an link:https://www.broadband-forum.org/open-broadband/open-broadband-software/open-broadband-broadband-access-abstraction-ob-baa[Open Broadband Access Abstraction] layer which provides vendor independences and compliance with the point of delivery specifications.
 
-=== Container Fabric
+For each OLT it is required for the Point of Delivery (APOD or APOD Extender) to have a virtual OLT function representation or virtual OLT proxy which provides the proper level of provisioning abstractions and may represent aggregate fabric under a vOLT proxy representation of all the various OLTs from one or multiple vendors. 
 
+Moreover, vOMCI functions for that specific OLT also needs proper representation in  a localized or extended container fabric. This allows for consistant and cohenrant management of the OMCI capabilities without vendor lock-in.
+
+The following vendors been involved in interoperability with the abstraction layer: 
+
+* Altice Labs
+* Altran / CapGemini
+* Calix
+* FiberHome
+* Iskratel
+* Tibit Communications Inc.
+* ZTE
+* Huawei
+* Nokia
+
+=== Compute Fabric
+
+The Computre Fabric is a small compute node that can run at least the vOLT, vOCMI and vBNG functional services. These also should be leverageable by end users of emerging services to provide enhanced services such as caching, virtual firewalls, IoT gateway software, etc.  
+
+The compute fabric should be able to address a broad variety of use cases including 5G, AI, Edge Iaas/PaaS, IoT for both providers and enterprise edge domains. The fabric should be able to run multiple workloads such as VMs, Containers, micro services, etc.
+
+It should leverage the link:lfedge.org[LF Edge] initiative software solutions based and supported as part of the solution for the point of delivery and integrated in the operational flow of the fabric.
 
 == APOD EXTENDER
 
