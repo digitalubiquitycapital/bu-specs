@@ -8,12 +8,6 @@ This guide provides a comprehensive set of requirements and guidelines for compl
 
 == OSS/BSS Systems
 
-== Border Network Gateway
-
-=== Software Defined Networking
-
-== Edge Container Fabric
-
-=== Hardware Acceleration
+== Testing Regime
 
 == Operations & Telemetry

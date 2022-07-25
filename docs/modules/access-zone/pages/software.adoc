@@ -1,23 +1,152 @@
 = Software
+:author: Mathieu Lemay
+:email: mlemay@digitalubiquitycapital.com
+:keywords: software, sdn, baa
 
 == Overview
 
-This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+The software implementation of the Access Zone is meant to provide all the required set of functional requirements for this zone. Moreover, it needs to have all the required capabilities to integrate and support other broadband utility zones (Market, Community) as well as emerging Mobility Technologies (vRAN). The software stacks are meant to provide a Broadband Access Abstraction, Enterprise services, Edge Container Fabric, Hardware Acceleration and Telemetry.
 
 == Broadband Access Abstraction
 
-=== Overview
+The OB-BAA software architecture is based on the logical system architecture where standardized northbound interfaces are defined for management (Minf_xxx) and control (Mfc_xxx). The standardized management interface is further broken down in the BAA layer administration (Minf_net-map, Minf_eq-inv) and the device management interfaces (Minf_Lxxx). The representation of the AN is exposed through each of the interfaces using access control to restrict access to parts of the AN.
+
+While most northbound interfaces used by OB-BAA are standardized, several interfaces (e.g., Mfc_L2-3) are used that haven’t been standardized or are in the process of standardization.
+
+image::ob-baa-arch.png[Broadband Abstraction Architecture]
+
+ANs interact with the BAA layer through the adapters of the SBI. These adapters can be specific a vendor's implementation or can be generic in the sense that vendors that have the same SBI can share a default adapter for the type of device.
+
+=== Network Functions
+
+This section describes the high-level design of the vOLT Management function (vOLTMF) used to manage ONUs through the vOMCI solution. 
+
+The vOMCI architecture diagram below depicts the vOMCI function and vOMCI Proxy microservices:
+
+image::ob-baa-design.png[Functions Microservices]
+
+This section describes communication between the vOLTMF, vOMCI Proxy and vOMCI function upon:
+
+* Creating and deleting ONUs
+* Receiving onu-state-change notifications
+* Sending requests to ONUs
+
+
 === vOLT
-=== vOLT Proxy
+
+The vOLTMF manages ONUs through a standard ONU adapter that is deployed in BAA, the association of which is based on the model, type, vendor and version mentioned while creating the ONU. The standard ONU adapter uses the standard library of the YANG modules for ONUs that the vOLTMF refers to for handling ONU requests, responses and notifications from external management systems. The following figure depicts the vOLTMF and ONU Adapter components that reside in the BAA microservice.
+
+
+The vOLTMF performs actions upon receiving notifications and requests either from an OLT device or other components within the BAA core. For example, the onu-state-change notification that is sent by the OLT device on its Northbound Interface (NBI) that is received by BAA core. The BAA core propagates the notification towards vOLTMF and BAA NBI so that it can be handled by the Access SDN management and control.
+
 === vOMCI
+
+The vOMCI function, is deployed as a microservice, is responsible for:
+
+* Receiving service configurations from the vOLT Management function
+
+* Translating the received configurations into ITU G.988 OMCI management entities (ME) and formatting them into OMCI messages
+
+* Encapsulating and sending (receiving and de-encapsulating) formatted OMCI messages (ultimately targeting the ONU attached to the OLT) to (from) the vOMCI Proxy
+
+* Translating the OMCI messages (representing ONU’s operational data) received from the vOMCI Proxy into data (e.g. notifications, acknowledges, alarms, PM registers) understandable by the vOLT Management function
+
+* Sending the above ONU operational data to the vOLT Management function
+
+The vOMCI function communicates with the vOLT Management function using Kafka bus that exchange GPB formatted messages as defined in WT-451.
+
+=== vOMCI Proxy
+
+The vOMCI Proxy works as an aggregation and interception point that avoids the need for an OLT to directly connect to individual vOMCI functions and can act as a control/interception point between the OLT and vOMCI function that is useful for troubleshooting and other management purposes (e.g., security). As the aggregation/interception point, the vOMCI Proxy is responsible for maintaining the associations between OLTs and the corresponding vOMCI functions.
+
+
+The vOMCI Proxy, deployed as a microservice, communicates with the vOMCI function.
+
+The vOMCI Proxy is a gRPC endpoint that communicates with the OLT.
 
 == Border Network Gateway
 
-=== Software Defined Networking
+The requirements for the BNG Software package are primarily based in the following Technical Report from the xref::attachment$TR-101_Issue-2.pdf[Broadband Forum: TR-101 Issue 2 (2011) – Migration to Ethernet-Based Broadband Aggregation]. Any compliant solution must provide a very high degree of compliance with such Technical Report and its list of requirements. Several of these will be explicitly mentioned in this specification for clarification; however, that does not exclude the needed compliance with the rest.
+
+Together with TR-101, these three additional Technical Reports must be supported:
+
+* xref:attachment$TR-092.pdf[TR-092] (2004): Broadband Remote Access Server (BRAS) Requirements
+Document
+* xref:attachment$TR-146.pdf[TR-146] (2013): Subscriber Sessions
+
+As derived from TR-101, the main access technology will be Ethernet. In particular,the Open BNG must support IEEE 802.1Q frames, and VLAN stacking (QinQ) mechanisms as per IEEE 802.1ad. It must be noted that QinQ must be supported even if the ethertype of the outer VLAN is 0x8100 instead of the standard 0x88A8.
+
+It shall be possible to assign automatically one (or more) IP address to all subscribers in the Open BNG. These addresses may be: 
+
+[lowerroman]
+. fixed and configured in the Open BNG,
+. dynamic from a pool configured in the Open BNG, 
+. fixed defined by AAA server,
+. dynamic from a pool referenced by AAA server, or 
+. dynamic from a pool provided by AAA server.
+
+Proposals for the support of legacy ATM access technologies will also be valued. These proposals can leverage on external equipment, like intermediate devices,specific pluggable optics, etc.
+
+== Software Defined Networking
+
+== Enterprise Provider Edge
+
+For enterprise and tower services the A-POD must implement the proper link:https://www.mef.net/service-automation/lso-apis/intra-provider-apis/lso-adagio/[LSO Adagio] internal interfaces to partcipate in the MEF LSO Reference Architecture (MEF 55) for the xref:xxx[Community Zone]. The relevant A-POD resources must be made available under link:https://www.mef.net/service-automation/lso-apis/intra-provider-apis/lso-presto/[Presto API]'s leveraging T-API (MEF-66) and Network Resource Management Information Model (MEF 59) as per the definitions in order to be orchestrated and managed by end-to-end services leveraging orchestrations in the xref:xxx[Community Zone] adminisitrative domain. 
 
 == Edge Container Fabric
 
-=== Hardware Acceleration
+The Edge Container Fabric is expected to follow link:http://www.lfedge.org[Linux Foundation's Edge] Akaraino's link:https://wiki.akraino.org/display/AK/Provider+Access+Edge+%28PAE%29+Blueprint[Provider Access Edge blueprint] is part of Akraino's Kubernetes-Native Infrastructure family of blueprints. As such, it leverages the best-practices and tools from the Kubernetes community to declaratively manage edge computing stacks at scale and with a consistent, uniform user experience from the infrastructure up to the services and from developer environments to production environments on bare metal or on public cloud.
 
+image::akraino-edge.png[Akraino - Provider Access Edge (PAE)]
+
+This blueprint targets small footprint deployments able to host NFV (in particular vOLT, vOCMI, vRAN) and MEC (e.g. AR/VR, machine learning, AI,etc.) workloads at the edge to allow for IoT, Industry 4.0 and Autonomous Vehicles (Drones, Tractors, Cars). Its key features are:
+
+* Lightweight, self-managing clusters based on CoreOS and Kubernetes (OKD distro). 
+* Support for VMs (via KubeVirt) and containers on a common infrastructure. 
+* Application lifecycle management using the Operator Framework. * Support for multiple networks using Multus, including fast dataplane like SRIOV, DPDK.
+* Support for real-time workloads using CentOS-rt*.
+* High performance optimizations (hugepages, CPU topology management, etc.)
+
+For proper management, the edge fabric must be able to be adminsitratively compatible with the xref:xxx:Market Zone[Market Zone] cloud and cloud-native requirements and will provide extension point and capabilities for retail service providers edge requirements in VNFs as well as emerging applications and services that will have low-latency requirements or data pre-processing needs for cloud optimizations.
+
+== Hardware Acceleration
+
+For security purposes and multi-tenancy, the fabric must support existing applications and access to hardware accelerations via a P4 Runtime abstraction under the Portable NIC Architecture to avoid NIC limitations in providing a proper service processing pipeline and isolation for the various tenants from Retail Service Providers to Emerging Services Providers. 
+
+image::p4-architecture.png[PNA Specification]
+
+The Portable NIC Architecture (PNA) is P4 architecture that defines the structure and common capabilities for network interface controller (NIC) devices. PNA comprises two main components:
+
+A programmable pipeline that can be used to realize a variety of different “packet paths” going between the various ports on the device (e.g., network interfaces or the host system it is attached to), and
+
+A library of types (e.g., intrinsict and standard metadata) and P416 externs (e.g., counters, meters, and registers).
+
+PNA is designed to model the common features of a broad class of NIC devices. 
+
+The Portable NIC Architecture (PNA) Model has four programmable P4 blocks and several fixed-function blocks, as shown in figure above. The behavior of the programmable blocks is specified using P4. The network ports, packet queues, and (optional) inline extern blocks are fixed-function blocks that can be configured by the control plane, but are not intended to be programmed using P4.
 
 == Operations & Telemetry
+It is expected that operations and telemetry software systems will provide the right interfaces to allow for Operations and Maintenance procedures to be established by the broadband utility operator. These interfaces depend on the nature of the services in two categories.
+
+=== Bitstream services and Best effort services
+
+The Transmission Control Protocol (TCP), which current ad-hoc speed tests are based on, was for a long time considered the only option as a reliable transport protocol. However, TCP reacts conservatively to loss and round-trip delay, and therefore produces a significant underestimate of Maximum IP-Layer Capacity. This has resulted in a gap between actual service rates and TCP’s estimates. For operators facing increasing regulatory demands to provide consumers with increasing speeds and ensure that these are delivered as advertised, finding a solution has become a top priority. Bitstream services need to be measured at the IP layer following the specifications from xref:attachement$TR-471.pdf[TR-471 - Maximum IP-Layer Capacity Metric, Related Metrics and Measurements].As outlined in Broadband Forum’s IP Layer Capacity Metrics and Measurement (TR-471) specification, the User Data Protocol-based measurement of Maximum IP Capacity simultaneously measures the packet loss, round-trip delay, delay variation, and reordering present. This is superior information to that which is provided by TCP and Ping measurements made separately, and this will ultimately close the gap between actual service rates and TCP’s estimates under the measured conditions. This addresses current measurement issues with high-speed internet access and will act as the ultimate communication protocol used across the internet.  Broadband Forum harmonized its TR-471 specification with the ITU-T, ETSI-STQ/Mobile, and the IETF for the widest industry impact.
+
+* ITU-T Recommendation Y.1540 (12/2019): Internet protocol data communication service - IP packet transfer and availability performance parameters, ITU-T Y.1540, https://www.itu.int/rec/T-REC-Y.1540-201912-I/en
+
+* ITU-T Y-series Supplement 60 (2020): Interpreting ITU-T Y.1540 maximum IP-layer capacity measurements, ITU-T Y.Sup60, https://www.itu.int/rec/T-REC-Y.Sup60/en
+
+* ETSI Technical Specification 103 222 Part 2 (08/2019): Reference benchmarking and KPIs for High speed internet, ETSI TS 103 222-2, V.1.2.1, https://www.etsi.org/deliver/etsi_ts/103200_103299/10322202/01.02.01_60/ts_10322202v010201p.pdf
+
+* IETF RFC 9097: Metrics and Methods for One-way IP Capacity, https://datatracker.ietf.org/doc/html/rfc9097
+
+* ETSI Technical Report 103 702 (2020-10): Speech and multimedia Transmission Quality (STQ); QoS parameters and test scenarios for assessing network capabilities in 5G performance measurements, ETSI TR 103 702, V.0.1.0 https://www.etsi.org/deliver/etsi_tr/103700_103799/103702/01.01.01_60/tr_103702v010101p.pdf
+
+
+link:https://github.com/BroadbandForum/obudpst[Open Broadband-UDP Speed Test (OB-UDPST)] is a client/server software utility to demonstrate one approach of doing IP capacity measurements and should be used for testing.
+
+=== Enterprise, Mobility and High-Quality services
+
+The access zone must support the xref:attachment$MEF-86.pdf[Presto Service OAM Interface Profile Specification (MEF-86)] and xref:attachment$MEF-67.pdf[Service Activation Testing for IP Services (MEF 67)] when providing IP Services. The level and performance of these services are contractually bound and need to be tested, measured and monitored. 
+
+

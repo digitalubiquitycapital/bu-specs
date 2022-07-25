@@ -66,11 +66,13 @@ The compute fabric should be able to address a broad variety of use cases includ
 
 It should leverage the link:lfedge.org[LF Edge] initiative software solutions based and supported as part of the solution for the point of delivery and integrated in the operational flow of the fabric.
 
-== APOD EXTENDER
+=== Operations System
 
-=== Optical Line Terminal
+A multi-tenant capable OSS/BSS is required to allow management, service provisioning and billing of services under the Access Zone. Moreover, the OSS and BSS must be capable of provisioning as well as gatering the information coming from the vOMCI and vOLT instances to provide the right operational dashboards for NOCs and other zone services integrations. 
 
-=== Container Fabric
+== A-POD EXTENDER
+
+The A-POD Extenders are meant to provide Remote OLT capacities to the A-POD while providing seemless integration on the abstraction layer from the A-POD Compute Fabric and OLT abstractions. Physical OLTs used in extenders may be from different vendors but will be abstracted properly for OSS
 
 
 

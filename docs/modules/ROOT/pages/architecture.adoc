@@ -32,14 +32,20 @@ Each project is different and has various factors that will need to be traded-of
 | Purpose
 | Service Residential, SME, Wireless and small Enterprise
 | Large Enterprise, Point of Handover, Service Providers
-| Datacenter Interconnect, Market Interconnect
+| Market Hubs Interconnections, Content Reach, Applications
 | Carrier & Transport Networking
+
+| Network Type
+| Last-Mile / Access Network
+| Middle-Mile Metro & Core Network
+| Datacenter Interconnect
+| Long-haul Network
 
 | Distances
 | ~ 10-40km
-| ~ 40-120km
-| ~ 120km-500km
-| ~ 500km
+| ~ 40-500km
+| ~ 80km-1000km
+| > 500km
 
 | Technology
 | XGS-PON
@@ -90,17 +96,25 @@ The broadband utility identifies key requirements, service definitions, and data
 
 | Services Interconnect
 | CPE
+| ETHERNET UNI/NNI
 | ETHERNET UNI
-| ETHERNET NNI
 | OTN NNI
 
 | OAM
-| vOMCI
-| ITU Y.1731
+
 a| 
-* MPLS OAM 
+* vOMCI 
+* ITU Y.1731
+
+a| 
+* ITU Y.1731
+* MPLS OAM
+
+a| 
 * NETCONF 
-* gNMI
+* gRPC
+* Cloud APIs
+
 a| 
 * OpenConfig 
 * gNMI 
