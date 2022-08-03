@@ -2,7 +2,7 @@
 
 == Overview
 
-To provide uniformity and consistancy across broadband utilities the hardware must be abstracted in point of delivery (POD). These point of delivery are meant to be consistant across the architecture and must contain all the functional elements from the architecture under their respective specifications. The PODs can be dimensioned for capacity but it is expected that networks will have at least the flavors below.
+To provide uniformity and consistency across broadband utilities the hardware must be abstracted in the Access Point Of Delivery (A-POD). These A-PODs are meant to be consistent across the architecture and must contain all the functional elements from the architecture under their respective specifications. The A-PODs can be dimensioned for capacity but it is expected that networks will have at least the flavors below.
 
 == APOD 
 
@@ -26,7 +26,7 @@ The cabinets for the A-POD should be NEMA 3R Enclosures that are preinstalled wi
 
 === Network Equipment
 
-The internals of the POD may be productized as a black box as long as all software and functional requirements are met however the following capacities need to be delivered for the underlying form factor to be consistant with design criteria.
+The internals of the POD may be productized as a black box as long as all software and functional requirements are met however the following capacities need to be delivered for the underlying form factor to be consistent with design criteria.
 
 |===
 | Size | Small | Large
@@ -54,13 +54,13 @@ The compute solution .
 
 == APOD EXTENDER
 
-The A-POD EXTENDER should be available under two different sizes and meant to be installed on poles or buildings near power and are in clamshell or 2RU enclosures. They need to have the ability to work with the A-POD in instanciating their relative vOLT proxies and may or may have local compute capabilities or intelligence. They are mean to extend the reach of A-POD fabric on longer distances while not impacting the management and control domains similar to local deployments.
+The A-POD EXTENDER should be available under two different sizes and meant to be installed on poles or buildings near power and are in clamshell or 2RU enclosures. They need to have the ability to work with the A-POD in instantiating their relative vOLT proxies and may or may have local compute capabilities or intelligence. They are mean to extend the reach of A-POD fabric on longer distances while leveraging to the greatest extent the management and control domains of the A-POD.
 
 image::apod-hw-extenders.png[A-POD Extenders Hardware]
 
 == Enclosure Requirements
 
-The APOD Extenders are meant to go outside on poles, buildings or under unconditionned environments. As such the enclosures are not temperature regulated and it is expected that the equipment will be capable of handling the extended ranges accordingly.
+The APOD Extenders are meant to go outside on poles, buildings or under outdoor environments. As such the enclosures are not temperature regulated and it is expected that the equipment will be capable of handling the extended ranges accordingly.
 
 |===
 | Size | Small | Large
@@ -73,7 +73,7 @@ The APOD Extenders are meant to go outside on poles, buildings or under uncondit
 
 == Network Equipment
 
-The extenders do not have the capabilities to provide entreprise services or towers site CPE routers however they are mean to provide additional reach to customers in rural environments where distances have more impact than density and capacity. They also have limited compute capabilities compared to the Edge Computing fabric provided by the A-POD. 
+The extenders do not have the capabilities to provide enterprise services or towers site CPE routers however they are mean to provide additional reach to customers in rural environments where distances have more impact than density and capacity. They also have limited compute capabilities compared to the Edge Computing fabric provided by the A-POD. 
 
 |===
 | Size | Small | Large

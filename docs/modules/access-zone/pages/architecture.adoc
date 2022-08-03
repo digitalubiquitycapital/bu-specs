@@ -2,7 +2,14 @@
 
 == Overview
 
-In order to meet the service requirements defined and required for the access zone as well as all of the non functional requirements on abstraction, security and vendor independance the following architecture is required and solutions MUST at minimum have the following components as part of the point of delivery (POD) solutions offered by the various vendors these internal components of the architecture are expected to be compliant to their respective set of specifications.
+The access zone is required to meet all requirements expressed in terms of abstraction, security and vendor independence. Its architecture MUST at minimum have the following components as part of Access Zone Point Of Delivery (POD): 
+
+. Broadban Network Gateway, 
+. Optical Line Terminal, 
+. Compute Fabric, 
+. Optical Network Terminal. 
+
+Whereas different vendors provide different components of the Access Zone, they are expected to be compliant to their respective subset of specifications such that the Access Zone is compliant overall to all required specifications.
 
 == Functional Requirements
 
@@ -11,11 +18,11 @@ The following image provides the functional elements that are *required* at a *m
 image::az-arch.png[Access Zore Architecture]
 
 == A-POD
-The Access POD or A-POD is a point of delivery of integrated software and hardware solutions that must contain the specifications compliant architectural components outlined below.
+The Access Zone POD or A-POD is a point of delivery of integrated software and hardware solutions that must contain the specifications compliant architectural components outlined below.
 
-=== Border Network Gateway
+=== Broadband Network Gateway
 
-The Border Network Gateway is expected to be compliant with meeting or exceeding the xref:attachment$TIP_OpenBNG_Requirements_1.0.pdf[OpenBNG Technical Requirements]. The Access POD must be able to have the required hardware capabilities in the form factor as well as leverage the ability to run virtual instances of the OpenBNG requirements a *vBNG* in the container fabric. This virtual BNG will not have the same capacitities as the hardware BNG but is required to have the same interfaces for SDN controllers and orchestrators.
+The Broadband Network Gateway is expected to be compliant with meeting or exceeding the xref:attachment$TIP_OpenBNG_Requirements_1.0.pdf[OpenBNG Technical Requirements]. The Access POD must be able to have the required hardware capabilities in the form factor as well as leverage the ability to run virtual instances of the OpenBNG requirements a *vBNG* in the container fabric. This virtual BNG will not be required to have the same capacitities as the hardware BNG but is required to have the same interfaces for SDN controllers and orchestrators.
 
 The following software providers have shown to have compliant software or hardware meeting the specifications:
 
@@ -38,25 +45,29 @@ a|
 
 This list is not meant to be an exhaustive list and provides only shortlisted compliant suppliers under the OpenBNG RFI activities by operators in December 2021.
 
+PPPoE is not desired for L2BAS however whereas IPoE is preferred. Accordingly, the shared network infrastructure is expected to employ DHCP (v4 and v6) Relays capable of passing circuit-identifiers to AAA Servers operated by Retail Internet Service Providers which will provide IP address assignments through the DHCP Relays (for both DHCP v4 and DHCPv6) operated by the broadband utility operator.  
+
 === Optical Line Terminal
 
 The Optical Line terminal (OLT) and vendors solutions needs to be abstracted via an link:https://www.broadband-forum.org/open-broadband/open-broadband-software/open-broadband-broadband-access-abstraction-ob-baa[Open Broadband Access Abstraction] layer which provides vendor independences and compliance with the point of delivery specifications.
 
 For each OLT it is required for the Point of Delivery (APOD or APOD Extender) to have a virtual OLT function representation or virtual OLT proxy which provides the proper level of provisioning abstractions and may represent aggregate fabric under a vOLT proxy representation of all the various OLTs from one or multiple vendors. 
 
-Moreover, vOMCI functions for that specific OLT also needs proper representation in  a localized or extended container fabric. This allows for consistant and cohenrant management of the OMCI capabilities without vendor lock-in.
+Moreover, vOMCI functions for that specific OLT also needs proper representation in  a localized or extended container fabric. This allows for consistent and coherent management of the OMCI capabilities without vendor lock-in.
 
 The following vendors been involved in interoperability with the abstraction layer: 
 
 * Altice Labs
 * Altran / CapGemini
+* Azores
 * Calix
 * FiberHome
+* Huawei
 * Iskratel
+* Nokia
 * Tibit Communications Inc.
 * ZTE
-* Huawei
-* Nokia
+
 
 === Compute Fabric
 
@@ -64,7 +75,7 @@ The Computre Fabric is a small compute node that can run at least the vOLT, vOCM
 
 The compute fabric should be able to address a broad variety of use cases including 5G, AI, Edge Iaas/PaaS, IoT for both providers and enterprise edge domains. The fabric should be able to run multiple workloads such as VMs, Containers, micro services, etc.
 
-It should leverage the link:lfedge.org[LF Edge] initiative software solutions based and supported as part of the solution for the point of delivery and integrated in the operational flow of the fabric.
+The A-POD compute fabric should leverage the link:lfedge.org[LF Edge] initiative from the Linux Foundation and the various software solutions based on it. as part of the the operational flow of the fabric of the A-POD.
 
 === Operations System
 
@@ -72,7 +83,7 @@ A multi-tenant capable OSS/BSS is required to allow management, service provisio
 
 == A-POD EXTENDER
 
-The A-POD Extenders are meant to provide Remote OLT capacities to the A-POD while providing seemless integration on the abstraction layer from the A-POD Compute Fabric and OLT abstractions. Physical OLTs used in extenders may be from different vendors but will be abstracted properly for OSS
+The A-POD Extenders are meant to provide Remote OLT capacities to the A-POD while providing seamless integration on the abstraction layer from the A-POD Compute Fabric and OLT abstractions. Physical OLTs used in extenders may be from different vendors but will be abstracted properly for OSS
 
 
 

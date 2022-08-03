@@ -5,7 +5,19 @@
 
 == Overview
 
-The software implementation of the Access Zone is meant to provide all the required set of functional requirements for this zone. Moreover, it needs to have all the required capabilities to integrate and support other broadband utility zones (Market, Community) as well as emerging Mobility Technologies (vRAN). The software stacks are meant to provide a Broadband Access Abstraction, Enterprise services, Edge Container Fabric, Hardware Acceleration and Telemetry.
+The software implementation of the Access Zone is meant to provide all the required set of functional requirements for this zone. It is expected to run within the compute fabric of the A-POD and to distribute its load across the compute fabrics across multiple A-PODs within the same network domain. Moreover, it needs to have all the required capabilities to integrate and support other broadband utility zones (Market, Community) as well as emerging Mobility Technologies (vRAN). 
+
+The software stacks are meant to provide  
+
+. Broadband Access Abstraction, 
+. Broadband Network Gateway, 
+. Software Defined Network,
+. Enterprise Provider Edge, 
+. Edge Computing Fabric, 
+. Hardware Offloading and 
+. Operations & Telemetry.
+
+These are required to provide proper interfaces to other zones services as extensions and integrations with their infrastructures as well as to deliver the proper level of services under the Access Zone.
 
 == Broadband Access Abstraction
 
@@ -64,7 +76,7 @@ The vOMCI Proxy, deployed as a microservice, communicates with the vOMCI functio
 
 The vOMCI Proxy is a gRPC endpoint that communicates with the OLT.
 
-== Border Network Gateway
+== Broadband Network Gateway
 
 The requirements for the BNG Software package are primarily based in the following Technical Report from the xref::attachment$TR-101_Issue-2.pdf[Broadband Forum: TR-101 Issue 2 (2011) – Migration to Ethernet-Based Broadband Aggregation]. Any compliant solution must provide a very high degree of compliance with such Technical Report and its list of requirements. Several of these will be explicitly mentioned in this specification for clarification; however, that does not exclude the needed compliance with the rest.
 
@@ -85,9 +97,22 @@ It shall be possible to assign automatically one (or more) IP address to all sub
 . dynamic from a pool referenced by AAA server, or 
 . dynamic from a pool provided by AAA server.
 
-Proposals for the support of legacy ATM access technologies will also be valued. These proposals can leverage on external equipment, like intermediate devices,specific pluggable optics, etc.
 
 == Software Defined Networking
+
+The Cloud Central Office, hosting and managing the SDN functions is expected to follow xref:attachment$TR-384.pdf[TR-384 - Cloud Central Office Reference Architectural Framework] and implement the proper interfaces as defined by xref:attachement$TD-411.pdf[TR-411 Definition of interfaces between CloudCO Functional Modules].
+
+image::ob-baa-sdn.png[Software Defined Networking]
+
+The E2E Service Orchestrator across the access zone of the utility issues a High-Speed Internet service creation request for a tenant to the Cloud Central Office Domain Orchestrator which orchestrates the establishment of appropriate network service by requesting the:
+
+* Access SDN M&C and VIM to configure a pre-activation trail (control and user plane) from the customer premises to the Access PNF and from the Access PNF to the multi-enduser(tenant) AAA and multi-enduser(tenant) IPAM VNFs.
+
+* Access SDN M&C to configure the AAA VNF with the enduser (tenant)’s authentication credentials and account. The controller also configures theVNF with the policy and address information for the
+enduser(tenant).
+
+* Leveraging Access SDN M&C Controllers, as well as the Virtual Infrastructure Manager to establish end to end user-plane connectivity.
+
 
 == Enterprise Provider Edge
 
@@ -109,7 +134,7 @@ This blueprint targets small footprint deployments able to host NFV (in particul
 
 For proper management, the edge fabric must be able to be adminsitratively compatible with the xref:xxx:Market Zone[Market Zone] cloud and cloud-native requirements and will provide extension point and capabilities for retail service providers edge requirements in VNFs as well as emerging applications and services that will have low-latency requirements or data pre-processing needs for cloud optimizations.
 
-== Hardware Acceleration
+== Hardware Offloading
 
 For security purposes and multi-tenancy, the fabric must support existing applications and access to hardware accelerations via a P4 Runtime abstraction under the Portable NIC Architecture to avoid NIC limitations in providing a proper service processing pipeline and isolation for the various tenants from Retail Service Providers to Emerging Services Providers. 
 
@@ -130,7 +155,7 @@ It is expected that operations and telemetry software systems will provide the r
 
 === Bitstream services and Best effort services
 
-The Transmission Control Protocol (TCP), which current ad-hoc speed tests are based on, was for a long time considered the only option as a reliable transport protocol. However, TCP reacts conservatively to loss and round-trip delay, and therefore produces a significant underestimate of Maximum IP-Layer Capacity. This has resulted in a gap between actual service rates and TCP’s estimates. For operators facing increasing regulatory demands to provide consumers with increasing speeds and ensure that these are delivered as advertised, finding a solution has become a top priority. Bitstream services need to be measured at the IP layer following the specifications from xref:attachement$TR-471.pdf[TR-471 - Maximum IP-Layer Capacity Metric, Related Metrics and Measurements].As outlined in Broadband Forum’s IP Layer Capacity Metrics and Measurement (TR-471) specification, the User Data Protocol-based measurement of Maximum IP Capacity simultaneously measures the packet loss, round-trip delay, delay variation, and reordering present. This is superior information to that which is provided by TCP and Ping measurements made separately, and this will ultimately close the gap between actual service rates and TCP’s estimates under the measured conditions. This addresses current measurement issues with high-speed internet access and will act as the ultimate communication protocol used across the internet.  Broadband Forum harmonized its TR-471 specification with the ITU-T, ETSI-STQ/Mobile, and the IETF for the widest industry impact.
+The Transmission Control Protocol (TCP), which current ad-hoc speed tests are based on, was for a long time considered the only option as a reliable transport protocol. However, TCP reacts conservatively to loss and round-trip delay, and therefore produces a significant underestimate of Maximum IP-Layer Capacity. This has resulted in a gap between actual service rates and TCP’s estimates. For operators facing increasing regulatory demands to provide consumers with increasing speeds and ensure that these are delivered as advertised, finding a solution has become a top priority. Bitstream services need to be measured at the IP layer following the specifications from xref:attachment$TR-471.pdf[TR-471 - Maximum IP-Layer Capacity Metric, Related Metrics and Measurements].As outlined in Broadband Forum’s IP Layer Capacity Metrics and Measurement (TR-471) specification, the User Data Protocol-based measurement of Maximum IP Capacity simultaneously measures the packet loss, round-trip delay, delay variation, and reordering present. This is superior information to that which is provided by TCP and Ping measurements made separately, and this will ultimately close the gap between actual service rates and TCP’s estimates under the measured conditions. This addresses current measurement issues with high-speed internet access and will act as the ultimate communication protocol used across the internet.  Broadband Forum harmonized its TR-471 specification with the ITU-T, ETSI-STQ/Mobile, and the IETF for the widest industry impact.
 
 * ITU-T Recommendation Y.1540 (12/2019): Internet protocol data communication service - IP packet transfer and availability performance parameters, ITU-T Y.1540, https://www.itu.int/rec/T-REC-Y.1540-201912-I/en
 

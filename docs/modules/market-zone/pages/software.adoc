@@ -11,7 +11,7 @@ This guide provides a comprehensive set of requirements and guidelines for compl
 === vOLT Proxy
 === vOMCI
 
-== Border Network Gateway
+== Broadband Network Gateway
 
 === Software Defined Networking
 

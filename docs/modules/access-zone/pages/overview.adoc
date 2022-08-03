@@ -2,11 +2,11 @@
 
 == Description
 
-Access Zones are the most complex zones of the infrastructure for a broadband utility. They must be flexible on onboard different types of customers and technologies from ultra rural markets to enterprise customers. As such the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
+The Access Zone is the most complex zone of the infrastructure for a broadband utility. It must be flexible and capable on onboarding different types of customers and technologies. A given access zone can be optimized for any given range of population density, from ultra rural markets to business parks comprising several large enterprise customers. As such the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
 
 == Problem
 
-The operators today are facing various issues when deploying access services for fixed customers (e.g. residential, SOHO, SME) to provide a secure and adequate service that will be compliant with wholesale regulations where most wholesale operators are required to meet specific Layer 2 Bitstream (L2BSA) specifications as well as provide lawful intercept requirements or the various hooks to have them provided and handled by the tenants of the broandband utility. Moreover the access network has been growing with demands being the bottleneck to most operators required to offer 25G default capacities to cell sites. 
+Some privately owned network operators accept to implement some form of open access as a consideration for obtaining significant public subsidies, however this often result in a traditional telco model offered under an "open" banner and may often change pricing and policies over time resuliting in significant increases on renewals or requirements for alternatives.  Where none step up, community network operators are formed and embrace a broadband utility model as their main mode of operation. In doing so, they avoid having to secure services and content like Transit Internet peering, television rights and public telephony interconnection, which are required for providing ISP, IPTV and VoIP services which can all be provided over the top and focus on providing the infrastructure components enabling market access and competition.  Broadband Utilities because they work with specific Retail Service Providers and Emerging Service Providers have  specific reporting requirements both in terms of network roll-out, ongoing network performance and quality of service indicators. As well as implementation of Layer 2 Bitstream (L2BSA) specifications, including lawful intercept requirements or the various hooks to have them provided and handled by the tenants of the broadband utility. Moreover, the insatiable appetite for more bandwidth and the availability of technological solutions to satisfy it such as 5G, now means that the access network is now the the bottleneck to most operators required to offer 25Gbps as the minimal default capacity to all cell site sector. Whereas the access network principally employs PON technology, this means that the network must be designed to be upgradable to 25GS-PON, at a minimum and have the necessary capacity to backhaul and aggregate several 25Gbs segments. Clearly, both GPON and XGS-PON solutions are no longer deemed the long-term future proof necessarily sufficient, and the network must be planned to support 25GS-PON, 50G PON and possibly WDM-PON, while supporting multi-tenancy, edge computing and upcoming physical security and isolation requirements.
 
 == Market Definition
 
@@ -17,12 +17,11 @@ The market for the access zone is made up of :
 * Wireless/Mobility Tower Sites (Fiber to the Tower)
 * IoT / Industry 4.0 (Fiber to the Farm, etc.)
 
-A limited set of services are defined to be able to address the requiements and compliance for meeting these customers under a multi-tenant infrastructure that provides the appropriate level of hardware isolation and capacities.
+A limited set of services are defined to be able to address the requirements and compliance for meeting these customers under a shared multi-tenant infrastructure that provides the appropriate level of traffic isolation and capacity expandability both in terms of throughput and edge compute, in order to be sufficiently future proof.
 
 == Objectives
 
-The Access Zone objectives is to provide Edge Computing Facilities for IoT, Industry 4.0 and running the access abstraction layers that will provide the right ammount of subscriber management features, routing capabilities and provider edge capabilities to support existing and future needs from Retail and Emerging Service providers offering them a secure and performant utility platform for retail Internet services and next generation applications.
-
+The objectives for the Access Zone are to provide Edge Computing Facilities for IoT, Industry 4.0 as well as, running the access abstraction layers that will provide the right amount of subscriber management features, routing capabilities and provider edge capabilities to support existing and future needs of Retail and Emerging Service providers. The Access Zone shall offer them a secure and performant utility platform for retail Internet services, IPTV, VoIP and next generation low latency applications such as autonomous vehicles, 3D/XR and IoT.
 
 
 

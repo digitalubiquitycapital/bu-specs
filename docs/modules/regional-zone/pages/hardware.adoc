@@ -12,7 +12,7 @@ This guide provides a comprehensive set of requirements and guidelines for compl
 
 === Edge Computing
 
-=== Border Network Gateway
+=== Broadband Network Gateway
 
 
 

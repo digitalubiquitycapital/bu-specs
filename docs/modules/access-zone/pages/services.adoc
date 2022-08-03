@@ -4,22 +4,22 @@
 
 Access Zones have multiple types of services that must be offered and controlled under the proper systems. Bitream Access Services, Routing, Provider Edge and Subcriber Management features have to work properly to offer a multi-service broadband access utility that can be comply with xref:attachment$TR-178.pdf[Broadband Forum Technical Report TR-178] on multi-service broadband access while also providing the proper capabilities for hardware isolation and ehanced multi-tenancy for security.
 
-=== 25G/XGS-PON Bitstream Services 
+=== Bitstream Access Services 
 
-Layer 2 Bistream Access Services are provided via XGS-PON or 25G-PON as part of the solution based on zone's technology solutions.
+Layer 2 Bistream Access Services (L2BAS) are to be provided via either XGS-PON, 25GS-PON or WDM-PON as part of the solution based on the Access Zone.
 
 The  must be able to forward bitstream services at least based on the following encapsulations: 
 
 * no tagging, 
-* VLAN tagging (IEEE 802.1q), 
-* VLAN double tagging (IEEE 802.1ad) 
-* MACinMAC (IEEE 802.1ah). 
+* VLAN tagging (IEEE 802.1Q), 
+* VLAN Provider Bridging tagging (IEEE 802.1ad) 
+* MACinMAC Provider Backbone Bridging (IEEE 802.1ah). 
 
-or double tagging, the TPID value must also admit 0x8100 in the outer VLAN, together with the standard 0x88A8.
+Whereas double tagging is employed, The TPID value of 0x8100 as the outer VLAN tag shall also be possible, together with the standard 0x88A8 as the outer VLAN tag.
 
-=== Direct Fiber Access
+=== Enterprise Services
 
-In the provision of L2 services for enterprise customers, the shall be MEF 3.0 compliant, at least with regards to E-LAN, E-LINE and E-TREE services. It will be very beneficial that the proposed platform is certified accordingly.
+In the provision of L2 services for enterprise customers, the L2BAS shall be MEF 3.0 compliant, at least with regards to E-LAN, E-LINE and E-TREE services. It will be very beneficial that the proposed platform be certified accordingly.
 
 In particular, the platform must support the implementation of E-LINE services based on VLL technology, and E-LAN services based on VPLS or H-VPLS. 
 
@@ -27,11 +27,16 @@ In particular, the platform must support the implementation of E-LINE services b
 
 * The proposed platform will permit configuring specific Layer-2 based filters per each L2VPN client connection. Other standard security measures shall be supported as well.
 
-* For E-LAN and E-TREE services, it must bepossible to configure in the proposed platform a different rate limit per each type of BUM traffic (one for broadcast, one for unknown unicast and one for multicast). It must also be possible to configure limits in the number of learnt MAC addresses per service and client interface, and the lifetime for these
+* For E-LAN and E-TREE services, it must bepossible to configure in the proposed platform a different rate limit per each type of Broadcast, Unicast and Multicast (BUM) traffic (one for broadcast, one for unknown unicast and one for multicast). It must also be possible to configure limits in the number of learnt MAC addresses per service and client interface, and the lifetime for these
 learnt MAC addresses.
 
 Finally, redundancy mechanisms, loop detection mechanisms and OAM
 functionalities shall be required for Direct Fiber Access Services. IGMP snooping must also be supported.
+
+
+=== Edge Computing Services
+
+Edge computing workloads must be able to run new experiences (i.e industrial IoT, 3D/XR content, real-time collaboration) demand more responsive connectivity and symmetric capacities. Compute shifting closer to the user; thereby redefining end-to-end (E2E) network performance requirements (i.e low, single-digit and sub-1ms latency are becoming a requirement). The workloads managers must be able to run virtualized appliances and cloud native workloads.
 
 === Lawful Intercept
 The Lawful Interception mechanism supported by the Access Zone must be
