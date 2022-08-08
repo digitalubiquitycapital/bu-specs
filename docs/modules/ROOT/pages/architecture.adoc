@@ -31,16 +31,16 @@ Each broadband utility deployment is unique in terms of geospatial constraints, 
 | 4
 
 | Purpose
-| Service Residential, SME, Wireless and small Enterprise
-| Large Enterprise, Point of Handover, Service Providers
-| Market Hubs Interconnections, Content Reach, Applications
-| Carrier & Transport Networking
+| Access Service Residential, SME, Wireless
+| Community Connectivity, Network Services, Service Providers
+| Market Hubs Interconnections
+| Regional Content and Applications
 
 | Network Type
 | Last-Mile / Access Network
 | Middle-Mile Metro & Core Network
-| Datacenter Interconnect
-| Long-haul Network
+| Exchange/DC Interconnect
+| Long-haul Network & Core Routing
 
 | Distances
 | ~ 10-40km
@@ -49,8 +49,8 @@ Each broadband utility deployment is unique in terms of geospatial constraints, 
 | > 500km
 
 | Technology
-| XGS-PON
-| ETHERNET/MPLS
+| XGS-PON/ETHERNET
+| CARRIER ETHERNET
 | PACKET/OPTICAL
 | PACKET/OPTICAL
 

@@ -82,8 +82,7 @@ The requirements for the BNG Software package are primarily based in the followi
 
 Together with TR-101, these three additional Technical Reports must be supported:
 
-* xref:attachment$TR-092.pdf[TR-092] (2004): Broadband Remote Access Server (BRAS) Requirements
-Document
+* xref:attachment$TR-092.pdf[TR-092] (2004): Broadband Remote Access Server (BRAS) Requirements Document
 * xref:attachment$TR-146.pdf[TR-146] (2013): Subscriber Sessions
 
 As derived from TR-101, the main access technology will be Ethernet. In particular,the Open BNG must support IEEE 802.1Q frames, and VLAN stacking (QinQ) mechanisms as per IEEE 802.1ad. It must be noted that QinQ must be supported even if the ethertype of the outer VLAN is 0x8100 instead of the standard 0x88A8.

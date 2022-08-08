@@ -2,7 +2,7 @@
 
 == Description
 
-The Access Zone is the most complex zone of the infrastructure for a broadband utility. It must be flexible and capable on onboarding different types of customers and technologies. A given access zone can be optimized for any given range of population density, from ultra rural markets to business parks comprising several large enterprise customers. As such the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
+The Access Zone is the most complex zone of the infrastructure for a broadband utility. It must be flexible and capable on onboarding different types of service providers and usually correlates with last mile infrastructure. A given access zone can be optimized for any given range of population density, from ultra rural markets to business parks comprising several large enterprise customers. As such, the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
 
 == Problem
 

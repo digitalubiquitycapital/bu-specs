@@ -2,7 +2,7 @@
 
 == Description
 
-Access Zones are the most complex zones of the infrastructure for a broadband utility. They must be flexible on onboard different types of customers and technologies from ultra rural markets to enterprise customers. As such the access zone has the requirements of meeting both residential subscriber management needs as well as enterprise provider edge (PE) requirements.
+Community Zones are named as such as they are connecting communities by providing the middle-mile infrastructure and services to access zones, entreprises and tower sites. These zones are meant to offer carrier-grade networks within a community mainly by providing services from the market zones into the communities. As such the community zone has the requirements of meeting enterprise provider edge (PE) requirements.
 
 == Problem
 

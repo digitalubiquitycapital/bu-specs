@@ -34,9 +34,9 @@ Finally, redundancy mechanisms, loop detection mechanisms and OAM
 functionalities shall be required for Direct Fiber Access Services. IGMP snooping must also be supported.
 
 
-=== Edge Computing Services
+=== Far Edge Computing Services
 
-Edge computing workloads must be able to run new experiences (i.e industrial IoT, 3D/XR content, real-time collaboration) demand more responsive connectivity and symmetric capacities. Compute shifting closer to the user; thereby redefining end-to-end (E2E) network performance requirements (i.e low, single-digit and sub-1ms latency are becoming a requirement). The workloads managers must be able to run virtualized appliances and cloud native workloads.
+Far Edge computing workloads must be able to run new experiences (i.e industrial IoT, 3D/XR content, real-time collaboration) demand more responsive connectivity and symmetric capacities. Compute shifting closer to the user; thereby redefining end-to-end (E2E) network performance requirements (i.e low, single-digit and sub-1ms latency are becoming a requirement). The workloads managers must be able to run virtualized appliances and cloud native workloads.
 
 === Lawful Intercept
 The Lawful Interception mechanism supported by the Access Zone must be
