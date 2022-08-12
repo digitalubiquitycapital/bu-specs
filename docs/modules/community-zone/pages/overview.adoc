@@ -2,11 +2,11 @@
 
 == Description
 
-Community Zones are named as such as they are connecting communities by providing the middle-mile infrastructure and services to access zones, entreprises and tower sites. These zones are meant to offer carrier-grade networks within a community mainly by providing services from the market zones into the communities. As such the community zone has the requirements of meeting enterprise provider edge (PE) requirements.
+Community Zones are named as such as they are connecting communities by providing the middle-mile infrastructure and services to access zones, entreprises and tower sites. These zones are meant to offer carrier-grade networks within a community mainly by providing services from the market zones into the communities. As such the community zone has the requirements of middle-mile networking with the appropriate level of traffic engineering, path protection and isolation required for a multi-tenant carrier grade infrastructure.
 
 == Problem
 
-The operators today are facing various issues when deploying access services for fixed customers (e.g. residential, SOHO, SME) to provide a secure and adequate service that will be compliant with wholesale regulations where most wholesale operators are required to meet specific Layer 2 Bitstream (L2BSA) specifications as well as provide lawful intercept requirements or the various hooks to have them provided and handled by the tenants of the broandband utility. Moreover the access network has been growing with demands being the bottleneck to most operators required to offer 25G default capacities to cell sites. 
+The operators today each have their own OSS/BSS methodology and processes which at scale can lead to internal standardization. Moreover, everytime there is a partnership with other operators, one must agree on terms, variations, expectations, processes and interfaces even in leveraging the same underlying services and capacities. Moreover, SLA break, billing errors and disputes between operators is frequent can becoming challenging situations. Broadband Utility while of significant size usally will pale in comparison to incumbent telecom providers or large aggregate carriers. For the tenants of the broadband utilities or operator partners it is important that all the utilities have a standardized interface for interaction in order to federate coverage across utility projects and their partners. This part of the specification focuses on providing that standardized automated experience by leveraging industry standards for interoperability and automation between leading edge carriers.
 
 == Market Definition
 
