@@ -10,18 +10,17 @@ The operators today each have their own OSS/BSS methodology and processes which 
 
 == Market Definition
 
-The market for the access zone is made up of :
+The market for the community zone is made up of :
 
-* Retail Customers (Residental, SOHO, SME)
-* Enterprise Customers (Direct Fiber Access)
-* Wireless/Mobility Tower Sites (Fiber to the Tower)
-* IoT / Industry 4.0 (Fiber to the Farm, etc.)
+* Carrier Customers 
+* Enterprise Customers
+* Retail Service Providers
 
-A limited set of services are defined to be able to address the requiements and compliance for meeting these customers under a multi-tenant infrastructure that provides the appropriate level of hardware isolation and capacities.
+The community zone also must link all the access zones together by providing them with a protected, diverse and reliable set of links and also cather to enterprise or important physical network access point (PNAP) services that would require the services.. It also must be able to provide proper point-of-handover in disaggregated network services to retail service providers. 
 
 == Objectives
 
-All projects that are financed by Digital Ubiquity Capital must comply with the frame of reference and values that makes them qualify for ESG investments and become economic development tools for the communities. Moreover, they must be done in partnership with various stakeholders in the communities, providing shared value and sustainable financial returns.
+The community zone has been created to offer an automated and autonomous approach enabling end-to-end orchestration and automation across multiple providers networks in order to offer frictionless services to the enterprise and offer Software-defined Digital Services that lay the foundation of connected communities.
 
 
 

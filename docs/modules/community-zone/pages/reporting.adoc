@@ -2,14 +2,223 @@
 
 == Overview
 
-This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+In addition to functional requirements, a reporting regime and information has to be provided for proper project governance and oversight that provides visibility on all the phases of the project from design and engineer down to operational and maintenace activities.
 
 == Requirements
 
-== Design
+The data has to be written properly to the APIs of the project's digital twin using the specific ontologies outlined below to provide accurate information about the project's metadata and guidance on design, efficiencies and service level probing requirements as per reporting regimes.
 
-== Build
 
-== Operations
+For completeness, the Layer 2 Traffic clause from Broadband Utility Operator Agreement is repeated below:
 
-== Maintenance
+Each End User’s traffic must be delivered to the POI to meet the following Service Levels, measured over each five minute interval (24 hours per day):
+
+|===
+| Metric |Frame Delay must be:	|Frame Delay Variation must be:	|Frame Loss must be:
+
+|CIR	|≤5 mS	|≤1 mS	|≤0.1%
+|EIR	|n/a	|n/a	|≤2%
+|=== 
+
+At least 99% of the frames within the five minute measurement interval must be within the above Service Levels, otherwise the service is to be considered unavailable for that five minute interval.
+
+=== Measurement of Layer 2 Traffic Service Level
+
+A suitable Layer 2 Traffic Service Level and measurement regime will be developed by DUC in consultation with the Broadband Utility Operator and Telecommunications industry experts, with the delivery dates to be documented in the Network Deployment Plan.
+
+Parameters that need to be measured are:
+[loweralpha]
+. FL
+. FD
+. FDV
+
+For the avoidance of doubt, the following applies:
+
+[loweralpha]
+. The Layer 2 Traffic Service Levels apply to all traffic, including traffic greater than 100Mbps.
+
+. All traffic the accepted into the Network must be carried in accordance with the Layer 2 Traffic Service Levels.
+
+. Any Service Level Breach contributes to service Downtime. The Layer 2 Traffic Service Levels apply continuously and are in force during planned outages; planned outages that impact on the Layer 2 Traffic Service Levels will therefore contribute to Downtime and will be a Service Level Breach.
+ 
+=== Considerations for RSPs
+
+All traffic an access zone accepts into its Network must be carried in accordance with the Layer 2 Traffic Service Levels.
+
+The network may either police traffic to the service profile on ingress, allowing for a reasonable CBS/EBS as per the Service Descriptions in the WSA, or carry all offered traffic according to the Layer 2 Traffic Service Levels.
+
+The network Broadband Utility Operator may police any out-of-profile traffic (being the traffic that exceeds either the committed or excess information rate (CIR and EIR), or the burst size (EBS and CBS) specified in the WSA) that an RSP offers to the Network, and this may impact on End User performance. RSPs may therefore want to consider shaping their traffic prior to offering it to an Broadband Utility Operator.
+
+=== Minimum reporting requirements 
+
+The Broadband Utility Operator is to develop an SLA report and give this to the RSPs (unless otherwise agreed by the RSPs) and DUC (or its successor) on a monthly basis and uploaded on the project portal. The SLA report will include the following information:
+
+==== Port Utilisation
+
+[loweralpha]
+. all Port Utilisation measurements for all Network Ports, including Ports not breached if requested by an RSP;
+
+. XGS-PON Port Utilisation measurements for review purposes;
+
+. Port interface drops for all relevant interfaces if requested by an RSP;
+
+. the current Port Utilisation Threshold (as set out in Section 6);
+
+. the new Port Utilisation Threshold, if the Port Utilisation Threshold needs to be adjusted (as set out in clause 7.6), and the implementation date;
+
+. any Port which experiences a Port Utilisation Threshold Breach during the reporting period and the Port Utilisation Measurement Intervals at which the Port Utilisation Threshold Breach occurred;
+
+==== Service Level Breach
+
+[loweralpha]
+. any End User Services where the Broadband Utility Operator has failed to meet the Layer 2 Traffic Service Levels (including the Default Service Level and Enhanced Service Level) for that End User Service;
+
+. any End Users that have exceeded the Maximum Downtime Service Level as set out in the UFB Wholesale Service Agreement Bitstream Service Level Terms and the applicable terms of the relevant NIPA (i.e. Schedule 5 (Service Levels), Annexure / Appendix 1, clause 4.2 - Layer 2 Service Availability – Maximum Downtime), including for Enhanced SLAs (if any);
+
+. any breaches of the Average Downtime Service Levels, as set out in the Wholesale Service Agreement and the applicable terms of the relevant Broadband Utility Operator Agreement, including for Enhanced SLAs (if any);
+
+. the Broadband Utility Operator must also report to DUC on any aggregate breaches (if any) as described in the Broadband Utility Operator Agreement;
+
+==== Reference and OAM Probes
+
+. the results from any Reference Probes (FD, FDV and FL) on request from the RSP;
+
+. any time a Reference Probe reports a measure that exceeds the allowable maximum FD, FDV, or FLR, the Probe Measurement Intervals at which the breach or breaches occurred, the Ports that the POI Probe monitors, and the duration of the Probe Performance Threshold Breach for each affected Port;
+
+. any Reference Probe Breach, the Probe Measurement Intervals at which the breach or breaches occurred, the Ports that the POI Probe monitors, and the duration of the Probe Performance Threshold Breach for each affected Port;
+
+. any Probe Performance Threshold Breach during the reporting period, the Probe Measurement Intervals at which the breach or breaches occurred, the Ports that the POI Probe monitors, and the duration of the Probe Performance Threshold Breach for each affected Port;
+
+. any OAM Probe breaches, the Probe Measurement Intervals at which the breach occurred, and any End Users that may have been affected by the probe breach
+
+. any Probe Failures, including the probe identity, date of failure, duration of failure, and restore time; and
+
+==== Other
+
+. any additional reporting requirements agreed between the RSPs and Broadband Utility Operators and set out in the WSA. This includes RSPs accessing near real-time traffic stats and Network performance of the Network.
+
+In addition to the reporting requirements, the Broadband Utility Operator should also consider providing:
+
+[lowerroman]
+. information relating to which End Users are monitored by which probe on a per-RSP basis (for example, by listing the End Users connected to an OLT and identifying which probe serves that OLT); and
+
+. information relating to which End Users are would be affected by high Port utilisation (for example, the End Users connected to each OLT, and the Ports that are between the OLT and the EAS).
+
+The following data retention rules apply:
+
+* data relating to Service Levels, gathered by a probe (e.g. the OAM Probe or the OLT Probe) must be stored electronically and uploaded to the project portal;
+
+* monthly reports must be kept for the term of the agreement and uploaded to the project portal.
+ 
+=== Port Utilisation
+
+
+The Broadband Utility Operator is to measure the Port Utilisation of all Ports within their Network between the UNI and the E-NNI, in both directions. The UNI, E-NNI and PON Ports themselves do not need to be measured for SLA purposes. Port Utilisation is a proxy for Layer 2 Traffic Service Level compliance. It does not directly measure Layer 2 Traffic Service Levels.
+
+If the Port Utilisation measure for all Ports is less than the Port Utilisation Threshold, then the Network is compliant and Layer 2 Traffic Service Levels are met.
+
+If Port Utilisation for any Port exceeds the Port Utilisation Threshold, then a Port Utilisation Threshold Breach has occurred and all End User Services that have traffic associated with that Port are marked as unavailable for the duration of the time (i.e. the sum of the number of five minute intervals) that the Port Utilisation Threshold is exceeded.
+
+The Port Utilisation Threshold will initially be set at 95%.
+
+If the Port Utilisation Threshold has been reduced, and there have been no Reference Probe Breaches for a consecutive three month period following the introduction of the new Port Utilisation Threshold, then the Broadband Utility Operator may increase the Port Utilisation Threshold by 1% for every three month consecutive periods during which no Reference Probe Breach occurs until the Port Utilisation Threshold reaches the previous level.
+
+===	Reference Probes
+
+Reference Probes are in place to confirm that the Network is capable of meeting the Layer 2 Traffic Service Levels at the Port Utilisation Threshold, and to identify any Network failures that do not contribute to a Port Utilisation Threshold Breach but do contribute to SLA breaches.
+
+The Broadband Utility Operator will establish a minimum of one OLT Probe per OLT. The OLT Probe is a Reference Probe and will be located in the Test ONT, or will be a separate device connected to the Test ONT. This Test ONT must connect to the OLT via a Production Splitter. The OLT Probe acts as a reflector as defined in ITU standards G.8013 and Y.1731 (08/2015) to reflect Synthetic Test Traffic back to the POI Probe with time stamps.
+
+The Broadband Utility Operator will establish a minimum of one POI Probe per POI. The POI Probe is a Reference Probe and will be located in each EAS, or will be a separate device connected to each EAS. The POI Probe will inject Synthetic Test Traffic into an OVC and measure the FD, FDV, and FL of this Synthetic Test Traffic by means of the traffic reflected by the OLT Probe.
+
+The OVC that carries the Synthetic Test Traffic must be established between the POI Probe and each OLT Probe. This OVC and the Synthetic Test Traffic must not be prioritised or otherwise treated differently from any other drop ineligible traffic within the Network. The Reference Probe and test OVC will be configured with a standard Broadband Utility profile of 1000Mbps downstream, 500Mbps upstream, and 50Mbps CIR in each direction.
+
+The performance monitoring functions required for Reference Probes are defined in the ITU standards G.8013 and Y.1731 (08/2015)):
+
+*	Single-Ended Synthetic Loss
+
+*	One Way SLR (ETH-SLM)
+
+*	Single-Ended Delay
+ 
+*	One Way FD/FDV (ETH-DM); or
+
+*	Two Way FD/FDV (ETH-DM).
+
+If a Reference Probe Breach has occurred due to lack of Network capacity and a Port Utilisation Threshold Breach has not occurred then, unless there is a clear Network failure:
+
+*	a Service Level Breach has not occurred;
+
+*	the Network is deemed to be incapable of supporting the Layer 2 traffic performance SLAs at the Port Utilisation Threshold in place at that time;
+
+*	the current Port Utilisation Threshold must be decreased by 5% (e.g. from 95% to 90%) across the Network; and
+
+*	within three months of the Reference Probe Breach, the Port Utilisation of all Ports in the Network must be below the new Port Utilisation Threshold. For the avoidance of doubt, this new Port Utilisation Threshold is used for determining if a Service Level Breach has occurred. During this three month period, any Reference Probe Breaches may be ignored; however, any Port Utilisation Threshold Breach is a Service Level Breach.
+
+If the Reference Probe Breach was not caused by lack of Network capacity and there is a clear Network failure then the Broadband Utility Operator does not need to reduce the Port Utilisation Threshold. A Network failure would include for example, the failure of a LAG group or Layer 2 Services Network element (including failure due to Network or software upgrades), but would not include for example, a lack of provisioned capacity (including the failure of a single link in a LAG group).
+
+If the Probe Performance Threshold is exceeded, then there is a Probe Performance Threshold Breach. The Probe Performance Threshold is set at such a level that any breach is likely to be due to a Network failure that will not show up as a Port Utilisation Threshold Breach.
+
+If there is a Port Utilisation Threshold Breach, and a Reference Probe Breach occurs as a result, then the Reference Probe Breach may be ignored.
+
+However, regardless of Port Utilisation, if a Probe Performance Threshold Breach occurs, then all End User Services that have traffic associated with that OLT are marked as unavailable for the duration of the time that the Probe Performance Threshold is exceeded.
+
+
+=== OAM Probes
+ 
+On request from an RSP, the Broadband Utility Operator will establish OAM Probes in each Enterprise Service within 5 business days of receiving the request. These OAM Probes:
+
+==== Enterprise Services
+
+[loweroman]
+. will be used to determine compliance with the Layer 2 Traffic Service Levels;
+
+. will be used for OAM performance monitoring functions (FLR, FD, FDV, throughput);
+
+. may be used for OAM fault management functions (Ethernet Continuity Check, Ethernet Test, etc.). The Broadband Utility Operator and RSPs are to agree on the type of test functions to be allowed, and update the WSA relevant operations manuals accordingly;
+
+. may be software or hardware based and may be external to the ONT. All hardware or external OAM Probes will terminate on a UNI port that has no other Services provisioned on it;
+
+. will be a G.8013/Y.1731 (08/2015) End Point; and
+
+. will be configured with a single dedicated test OVC terminating on a POI Probe. The POI Probe will inject synthetic Test Traffic into the test OVC. The OVC will carry CIR (high priority) traffic and be will be configured with a UFB Bitstream 4 profile, as requested by the RSP.
+
+
+==== Bitstream Services
+
+The Broadband Utility Operator will provide an OAM Probe for XGS-PON Services within 5 business days of an RSP request and approved by DUC, if the RSP provides reasonable evidence that the XGS-PON End User Service may not be complying with the Layer 2 Traffic Service Levels. Reasonable evidence could include repeat customer complaints, customer-initiated test results, or results of Broadband Utility Operator tests to their Customer Premises Equipment for DUC approval. These OAM Probes:
+
+. will be used to determine compliance with the Layer 2 Traffic Service Levels;
+
+. may be software or hardware based and may be external to the ONT. All hardware or external OAM Probes will terminate on a UNI port that has no other Services provisioned on it;
+
+. will be a G.8013/Y.1731 (08/2015) End Point, is an Broadband Utility Operator MEP, deployed on each OAM Probe, and the MEP is used as a G.8013/Y.1731 (08/2015) reflector;
+
+. will be configured with two dedicated test OVCs terminating on a POI Probe. One OVC will carry EIR (low priority) traffic, and one OVC will carry CIR (high priority) traffic. Synthetic Test Traffic will be injected into the test OVCs by the POI Probe. The test OVCs will be configured using a standard profile of 1000Mbps downstream, 500Mbps upstream, and 50Mbps CIR in each direction; and
+
+. may be deactivated and/or removed by the Broadband Utility Operator once it has been established that the service complies with the Layer 2 Traffic Service Levels.
+
+=== Performance Monitoring Functions required for OAM Probes are:
+
+* Single-Ended Synthetic Loss
+
+* one way SLR (ETH-SLM)
+
+* Single-Ended Delay
+
+* one way FD/FDV (ETH-DM or;
+
+* two way FD/FDV (ETH-DM)
+
+Test OVCs and Synthetic Test Traffic must not be prioritised or otherwise treated differently from any other traffic within the Network.
+
+The results from the OAM Probe will take precedence over the Port Utilisation measurements. Any reported Layer 2 Traffic Service Level Breach from an OAM Probe will count towards the Layer 2 Downtime SLA for that End User.
+
+===	Probe failures
+
+Hardware or software failure of any Probe (including OAM Probe, OLT Probe, or POI Probe) does not contribute to a Layer 2 Traffic Service Level Breach, as long as the Broadband Utility Operator repairs the Probe within five business days (or, in the case of OAM Probes and if requested by an RSP, at a time agreed with the RSP). If the Broadband Utility Operator does not repair the Probe within five business days (or, in the case of an OAM Probe, the time agreed with the RSP), then the services the Probe is measuring are marked as unavailable for the period that the Probe is not working.
+
+=== Change Management
+
+Changes to these requirements will require Digital Ubiquity Capital's (or its successor's) approval, and may only be made after agreement from at least 60% of the RSPs that have connections with the Broadband Utility Operator, or if an RSP-initiated audit finds flaws in the reports. The Broadband Utility Operators will be required to consult with RSPs in good faith prior to any changes coming into effect.
+

@@ -1,16 +1,46 @@
-= Zone Services
+= Community Zone Services
+== Overview
 
-== Service Definitions
+Community Zones have multiple types of that cather to the two types of customers for the Zone and follows the xlink:www.mef.net[Metro Ethernet Forum] service definitions and datastructures.
 
-This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+== Subscriber Ethernet Services
 
-=== Bitstream Services
+Subscriber Ethernet services are mainly focused on Enterprise market potential within a community and enterprise services. It also is meant to offer carrier grade services to critical services components of the infrastructure. These services are usually meant to address internal needs within the community of actors such as regional health networks, large enteprise players, education networks and also provide access to cloud services to critical institutions.
+
+=== Carrier Ethernet E-Line Service
+
+The point to point E-line set of services provide connectivity between two endpoints and useful for dedicated commercial Internet services between a Carrier provider partner and an existing customer relationship that lives within the community zone.
+
+image::CE_ELine.png[Carrier Ethernet - E-Line Service]
+
+It can also or access to direct wholesale capabilities between a provider site and a subscriber where the access zone Internet services don't offer the required service level agreements expected from the customer. The E-Line service comes with proper probes and direct monitoring to offer guaranteed bitrates to enterprise customers. 
 
 
-=== Enterprise PE
+=== Carrier Ethernet E-LAN Service
 
 
-=== Lawful Intercept
+The multi-point to multi-point E-LAN service enables multiple institutions within the community zone to have multipoint connectivity and be part of the same network. 
+
+image::CE_E-LAN.png[Carrier Ethernet - E-LAN Service]
+
+This is useful for education networks, firestation networks, municpal sites, or enterprises with multiple branch offices that need to work within the same corporate network with LAN extensions.
+
+=== Carrier Ethernet E-Tree Service
+
+
+The point to multi-point E-Tree service enables multiple institutions within the community to have multipoint connectivity to a single hub without having the ability for the traffic to be visible. This is useful for content distribution or scenarios of hub and spokes within the community. 
+
+image::CE_ETree.png[Carrier Ethernet - E-Tree Service]
+
+This service adddresses branch offices, cloud access and distribution services, IoT and market zone services delivery and content access from private Market Zone peers or emerging applications that require proper isolation between the subscriber members.
+
+== Operator Ethernet Services
+In addition, to cathering to the subscriber needs, the community network also is used to provide proper connectivity between the other zones and domains of operations of the broadband utility infrastructure.
+
+=== Access E-Line Service
+The Access E-Line Service is used to provide 
+
+=== Transit E-Line Service
 
 
 == Service Level Requirements

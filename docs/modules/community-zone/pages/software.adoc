@@ -2,22 +2,45 @@
 
 == Overview
 
-This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+The software layer of the community zone is required to have a MEF 3.0 compliance and deliver the interoperability, automation and interface required to completely simplify and manage the provider to provider interactions and also also for a streamlined and federated experience for smaller retail providers and carriers accross multiple utility networks. Broadband Utilities are often limited in geographical size and considerations in order to address local needs. It is why it is important that they have a standardized API and automation for service orders, fulfillment and service activation which makes the adoption of the utilities frictionless for the customers regardless of the internal processes, and mode of operations for the utility operator. While the data structures are based off MEF LSO standards they leverage pieces of SID and eTOM information frameworks from TMForum as well as other standards body APIs.
 
-== Broadband Access Abstraction
+== Software Models
+The software implementation is to deliver and interact with software models that are compliant from link:$$attachment[MEF 78.1 - MEF Core Model (MCM)] for interactions with the majority of the APIs implemented.
 
-=== Overview
-=== vOLT
-=== vOLT Proxy
-=== vOMCI
+== Application Interfaces Requirements
 
-== Broadband Network Gateway
+=== Subscriber Interface
 
-=== Software Defined Networking
+====
 
-== Edge Container Fabric
+====
 
-=== Hardware Acceleration
+=== Intraprovider Abstractions
 
+==== 
 
-== Operations & Telemetry
+=== Interprovider Interfaces
+
+Because enterprises and retail service providers demand agility and speed—demands that are difficult to deliver in multi-provider services. As such, goal is to make inter-provider business and orchestration frictionless and that takes a combination of common services language (e.g. MEF 3.0 service standards) and automation (e.g. MEF 3.0 LSO APIs).
+
+image::sonata-interlude-1.png[Inter-provider APIs]
+
+MEF’s East-West APIs, more formally called MEF 3.0 LSO Sonata and LSO Interlude, provide the framework, resulting standards, and SDKs to develop APIs that automate inter-provider business and orchestration.
+These East-West APIs support the federation of multiple providers across both business and operational elements to deliver a unified customer experience for the enterprise.
+
+==== LSO Sonata 
+
+The LSO Sonata interface and its APIs address the business-to-business layer of inter-provider interactions, like quoting, ordering, and inventory.
+
+LSO Sonata APIs address the business-to-business layer of inter-provider buying and selling at the commercial level. Much of the work to date has focused on this critical Interface Reference Point in the LSO Reference Architecture.
+
+LSO Sonata APIs combine product-agnostic products and services schema to support all phases of business-to-business transactions using automation APIs for the retail-wholesale ecosystem.
+
+LSO Sonata APIs address the business-to-business layer of inter-provider buying and selling at the commercial level. Much of the work to date has focused on this critical Interface Reference Point in the LSO Reference Architecture.
+
+LSO Sonata APIs combine product-agnostic products and services schema to support all phases of business-to-business transactions using automation APIs for the retail-wholesale ecosystem.
+
+The broadband utility should bring together service providers and a technology provider within the framework to accelerate the onboarding and operationalization of billing and settlement between two service-provider partners using DLT (Distributed Ledger Technology) and Smart Contracts. It provides a framework for multiple Smart Bilaterals, based on the xlink:xxx[MEF114 DLT-Based Commercial and Operational Framework—Billing and Settlement], and used by both Buyer and Seller of LSO Sonata APIs.
+
+==== LSO Interlude
+

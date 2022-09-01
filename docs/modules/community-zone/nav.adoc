@@ -1,2 +1,7 @@
 * Community Zone 
-** Under Review
+** xref:overview.adoc[Overview]
+** xref:services.adoc[Services]
+** xref:architecture.adoc[Architecture]
+** Hardware -- in review
+** xref:software.adoc[Software]
+** xref:reporting.adoc[Reporting]

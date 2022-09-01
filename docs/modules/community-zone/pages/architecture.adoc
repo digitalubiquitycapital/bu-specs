@@ -1,19 +1,34 @@
-= Zone Services
+= Architecture
+== Overview
 
-== Service Definitions
+The community zone is required to meet all requirements expressed in terms of abstraction, security and provider interoperability. Its architecture MUST at minimum have the following components as part of Community Zone Point Of Delivery (POD): 
 
-This guide provides a comprehensive set of requirements and guidelines for compliance in building and operating the active components of a broadband utility and is meant as a companion to the commercialization agreement in Digital Ubiquity Capital projects. In order to achieve repeatable outcome and blueprints it is important that all projects under Digital Ubiquity Capital governance follow the evolution of this guide when they are involving broadband utilities.
+. Aggregation Switching/Routing, 
+. Label Routing, 
+. Compute Fabric, 
 
-=== Bitstream Services
+Whereas different vendors provide different components of the Community Zone, they are expected to be compliant to their respective subset of specifications such that the Community Zone is compliant overall to all required specifications.
+
+== Functional Requirements
+
+The following image provides the functional elements that are *required* at a *minimum* for a compliants solution. Additional elements maybe added for completeness to the units of delivery.
+
+image::cz-arch.png[Community Zone Architecture]
+
+== C-POD
+The Community Zone POD or C-POD is a point of delivery of integrated software and hardware solutions that must contain the specifications compliant architectural components outlined below.
+
+=== Aggregation Switch/Router
+The Aggregation Switch must be capable of providing MPLS-PE provider edge functions as expected in order to provider the proper Carrier Ethernet transport services. It must also be able to interact with the market zone higher level services (Retail ISP, Emerging Services) by offering IP services when occasionally required through the interfaces and APIs.
+
+=== Label Router
+The label router must be able to manage segment 
 
 
-=== Enterprise PE
+=== Compute Fabric
 
+== Interconnections
 
-=== Lawful Intercept
+=== Protected Paths
 
-
-== Service Level Requirements
-
-Digital infrastructures are the foundational layer that are required to power tomorrow’s economy in the same way that railroads, roads, power and even waters ways have contributed to societies’ economic developments. Recent world events have accelerated radical digital transformations affecting the way we interact, work and live. It has demonstrated that in this upside down world,  health, education and government all need to leverage the digital infrastructures in a new way. This is why investing in partnership with communities is what will 
-
+=== 
