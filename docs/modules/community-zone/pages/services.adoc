@@ -27,7 +27,6 @@ This is useful for education networks, firestation networks, municpal sites, or 
 
 === Carrier Ethernet E-Tree Service
 
-
 The point to multi-point E-Tree service enables multiple institutions within the community to have multipoint connectivity to a single hub without having the ability for the traffic to be visible. This is useful for content distribution or scenarios of hub and spokes within the community. 
 
 image::CE_ETree.png[Carrier Ethernet - E-Tree Service]
@@ -35,13 +34,20 @@ image::CE_ETree.png[Carrier Ethernet - E-Tree Service]
 This service adddresses branch offices, cloud access and distribution services, IoT and market zone services delivery and content access from private Market Zone peers or emerging applications that require proper isolation between the subscriber members.
 
 == Operator Ethernet Services
+
 In addition, to cathering to the subscriber needs, the community network also is used to provide proper connectivity between the other zones and domains of operations of the broadband utility infrastructure.
 
 === Access E-Line Service
-The Access E-Line Service is used to provide 
+
+The Access E-Line Service is used to provide point-to-point connectivity to extend a service to off-net subscriber sites.
+
+image::CE_Access_ELine-1.png[Access E-Line]
 
 === Transit E-Line Service
 
+Transit E-Line services enable point-to-point connectivity to join multiple provider networks through an intermediate Carrier Ethernet network.
+
+image::CE_Transit_Eline.png[Transit E-Line]
 
 == Service Level Requirements
 

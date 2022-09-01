@@ -2,6 +2,7 @@
 ** xref:overview.adoc[Overview]
 ** xref:services.adoc[Services]
 ** xref:architecture.adoc[Architecture]
-** Hardware -- in review
 ** xref:software.adoc[Software]
+** Hardware - WIP
+** Operations - WIP
 ** xref:reporting.adoc[Reporting]

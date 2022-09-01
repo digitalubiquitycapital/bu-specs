@@ -8,16 +8,33 @@ The software layer of the community zone is required to have a MEF 3.0 complianc
 The software implementation is to deliver and interact with software models that are compliant from link:$$attachment[MEF 78.1 - MEF Core Model (MCM)] for interactions with the majority of the APIs implemented.
 
 == Application Interfaces Requirements
+Aligning business and technology within a service provider’s domain is critical for both maximizing the enterprise customer experience as well as driving operational excellence. The value of this alignment is multiplied when delivering enterprise digital and connectivity services across multiple providers.
+
+The automation and orchestration of both business and technology—both within, and between service providers, intersecting with cloud providers—should deliver a seamless, unified experience for the digital enterprise.
 
 === Subscriber Interface
 
-====
+MEF’s Subscriber APIs focus on the enterprise’s need for a frictionless digital experience when interfacing with its service provider to access the digital resources they need—be they cloud-based, connectivity-oriented, or application-focused, whether located locally, remotely, globally, at the core or at the edge of a network.
 
-====
+MEF’s Subscriber APIs, more formally called MEF 3.0 LSO Cantata and LSO Allegro, provide the framework, resulting standards, and SDKs to develop APIs that automate enterprise-to-service-provider services orchestration.
+
+images::eastwestapi.png[Subscriber APIs]
+
+Together with the rest of the LSO APIs and framework, these APIs enable an enterprise to communicate their ICT intent through an automated process realized across the underlying network-based resources packaged by their service provider—a truly frictionless experience.
+
 
 === Intraprovider Abstractions
 
-==== 
+The demand for business velocity and agility drives the modern enterprise. In turn, these aspirations drive the modern digital service provider. Software-Defined Networking (SDN), Network Function Virtualization (NFV), and their various incarnations, have provided some of the necessary capabilities, but the challenge continues to be the ability to fully orchestrate a subscriber service, end-to-end. In other words, the ability to effectively communicate user intent that is then fully realized by the underlying network infrastructure, dynamically and automatically.
+
+image::api-diagrams.png[Intradomain APIs]
+
+MEF’s LSO APIs—specifically those running ‘North-South’ within a provider domain—provide the framework to orchestrate services from the:
+
+Business-application layer to the service-orchestration layer: LSO Legato.
+Service-orchestration layer to the infrastructure-control layer: LSO Presto.
+Infrastructure-control layer to the element-control layer: LSO Adagio.
+The result of the North-South APIs is operational automation from business application through to service instantiation on the physical and virtual network resources within a service provider.
 
 === Interprovider Interfaces
 
@@ -43,4 +60,12 @@ LSO Sonata APIs combine product-agnostic products and services schema to support
 The broadband utility should bring together service providers and a technology provider within the framework to accelerate the onboarding and operationalization of billing and settlement between two service-provider partners using DLT (Distributed Ledger Technology) and Smart Contracts. It provides a framework for multiple Smart Bilaterals, based on the xlink:xxx[MEF114 DLT-Based Commercial and Operational Framework—Billing and Settlement], and used by both Buyer and Seller of LSO Sonata APIs.
 
 ==== LSO Interlude
+
+LSO Interlude APIs address the service-orchestration to service-orchestration layer of inter-provider interactions, like performance, state, and dynamic control. The service orchestration functionality is analogous to the OSS functions of a service provider.                                                                                                                                       Examples of Service Provider interactions handled by LSO Interlude APIs:
+
+Request changes to dynamic parameters, as permitted by service policies, on behalf of an enterprise customer.
+Query operational state of the Service.
+Request instantiation of connectivity between two service interfaces. 
+Receive event and performance telemetry.
+
 

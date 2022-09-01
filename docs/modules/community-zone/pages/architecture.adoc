@@ -16,19 +16,27 @@ The following image provides the functional elements that are *required* at a *m
 image::cz-arch.png[Community Zone Architecture]
 
 == C-POD
+
 The Community Zone POD or C-POD is a point of delivery of integrated software and hardware solutions that must contain the specifications compliant architectural components outlined below.
 
 === Aggregation Switch/Router
-The Aggregation Switch must be capable of providing MPLS-PE provider edge functions as expected in order to provider the proper Carrier Ethernet transport services. It must also be able to interact with the market zone higher level services (Retail ISP, Emerging Services) by offering IP services when occasionally required through the interfaces and APIs.
+
+The Aggregation Switch must be capable of providing MPLS-PE provider edge functions as expected in order to provider the proper Carrier Ethernet transport services. It must also be able to interact with the market zone higher level services (Retail ISP, Emerging Services) by offering IP services when occasionally required through the interfaces and APIs. All UNI ports should be monitored with CFM probes Y.1731 for proper guarantees and compliance with the LSO Telemetry APIs found in the Software section.
 
 === Label Router
-The label router must be able to manage segment 
+
+The label router must be able to manage segment routing through MPLS-SR but also should have MPLS-TP capabilities in order to support proper OVC requirements in delivery of Carrier Ethernet Services outlined under the service definitions. The Label Router should support E-NNI interfaces to interact with other providers properly with Carrier Ethernet handoffs.
 
 
 === Compute Fabric
 
+The compute fabric provides LSO API adapters and vendor specific middleware for ochestration and hosting. It also can support subscriber needs from the market zone where localized workloads are required such as edge caching, AI preprocessing where backhauling the information to a central localtion is both cost ineffective and the relevant data needs to be filtred from noise with local processing. 
+
 == Interconnections
+
+The architecture should follow a Mesh and Ring architecture that provides the various level of diversity required for proper redundancy and the ability to protect traffic should important links fail. The broadband utilty being a fiber rich environment should have the ability to at least dual home every POD node between themselves providing meshes and ring as part of the network topology.
 
 === Protected Paths
 
-=== 
+The technology should allow for protected path via OTN or MPLS technologies so that the Ethernet services delivered are provided without interruptions with high service level objectives. The protected paths virtual circuits should be orchestrated for resiliance and tolerance by leveraging the various levels of interconnections and diversity available.
+
